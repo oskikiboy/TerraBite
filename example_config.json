@@ -1,0 +1,14 @@
+{
+  "prefix": "%",
+  "secret":"randomphrase",
+  "owner": "210683612369125386",
+  "token": "",
+  "client_id": "",
+  "controller_role_name": "BOT CONTROLLER",
+  "administrator_role_name": "BOT ADMIN",
+  "clbotkey": "",
+  "gapikey": "",
+  "discordbotstoken": "",
+  "invitelink": "https://discordapp.com/oauth2/authorize?client_id=295942672890331147&scope=bot&permissions=2146958463",
+  "botsdiscordtoken": ""
+}
