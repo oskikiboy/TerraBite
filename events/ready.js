@@ -44,13 +44,13 @@ module.exports = async client => { // When the client is ready it will log to th
         client.user.setGame(`(ᵔᴥᵔ) | ${config.prefix}prefix`);
         break;
       case 5:
-        client.user.setGame(`with Friends | ${config.prefix}prefix`);
+        client.user.setGame(`with a HDD | ${config.prefix}prefix`);
         break;
       case 6:
         client.user.setGame(`cookies! | ${config.prefix}prefix`);
         break;
       case 7:
-        client.user.setGame(`hide and seek | ${config.prefix}prefix`);
+        client.user.setGame(`in a lab | ${config.prefix}prefix`);
         break;
       case 8:
         client.user.setGame(`with code | ${config.prefix}prefix`);
