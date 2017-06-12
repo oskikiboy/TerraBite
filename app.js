@@ -14,6 +14,12 @@ const config = require('./config.json');
 const fs = require('fs');
 const moment = require('moment');
 
+var connect = require('connect');
+var serveStatic = require('serve-static');
+connect().use(serveStatic(__dirname)).listen(8080, function(){
+    console.log('Server running on 8080...');
+});
+
 figlet('TerraBite', function(err, data) {
     if (err) {
         console.log('Something went wrong...');
