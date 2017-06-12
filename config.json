@@ -1,0 +1,15 @@
+
+{
+  "prefix": "/tb ",
+  "secret":"randomphrase",
+  "owner": "193972602392281088",
+  "token": "",
+  "client_id": "321909965201604611",
+  "controller_role_name": "Bot Operator",
+  "administrator_role_name": "Administrator",
+  "clbotkey": "",
+  "gapikey": "",
+  "discordbotstoken": "",
+  "invitelink": "https://discordapp.com/oauth2/authorize?client_id=321909965201604611&scope=bot&permissions=2146958463",
+  "botsdiscordtoken": ""
+}
