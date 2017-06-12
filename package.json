@@ -12,6 +12,7 @@
     "cors": "^2.8.3",
     "discord.js": "^11.1.0",
     "express": "^4.15.2",
+    "figlet": "^1.2.0",
     "fs": "0.0.1-security",
     "g-i-s": "^2.0.0",
     "json-web-token": "^2.1.3",

@@ -8,10 +8,20 @@ const os = require('os');
 const client = new Discord.Client({
   autoreconnect: true
 });
+var figlet = require('figlet');
 var shards = new Discord.ShardClientUtil(client);
 const config = require('./config.json');
 const fs = require('fs');
 const moment = require('moment');
+
+figlet('TerraBite', function(err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
+    console.log(data)
+});
 
 require('./utils/eventLoader.js')(client);
 
