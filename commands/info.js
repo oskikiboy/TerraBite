@@ -22,7 +22,7 @@ exports.run = async function (client, message, args) {
   let ping = parseFloat(Math.round((client.ping * 100) / 100)).toFixed(0);
   var embed = new Discord.RichEmbed()
       .setAuthor('Bot Info and Stats')
-      .setDescription('The Info and Stats of Timiki')
+      .setDescription('The Info and Stats of TerraBite')
   embed.addField("Bot Status", ' :ok_hand: All Good! ', true)
   embed.addField("Bot Version", `${package.version}`, true)
   embed.addField("Guilds", `${client.guilds.size}`, true)

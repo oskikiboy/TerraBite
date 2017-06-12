@@ -149,14 +149,14 @@ donate    invite    ping    uptime
     .setDescription("Commands to give you Information")
     .setColor(hexcols[~~(Math.random() * hexcols.length)])
     .addField(`help [command]`, 'Sends help to your DM\'s')
-    .addField(`stats`, 'Gives you some of Timiki\'s Stats')
+    .addField(`stats`, 'Gives you some of TerraBite\'s Stats')
     .addField(`membercount`, 'Shows the membercount for the current server')
     .addField(`userinfo <user>`, 'Shows you info about the mentioned user. Warns, Kicks, etc..')
     .addField(`weather <location>`, 'Shows you the weather forecast for the location specified')
-    .addField(`donate`, 'Gives you a link to support Timiki\'s Development')
-    .addField(`invite`, 'Gives you a link to invite Timiki to your server')
-    .addField(`ping`, 'Gives you the latency of Timiki')
-    .addField(`uptime`, 'Gives you the uptime of Timiki');
+    .addField(`donate`, 'Gives you a link to support TerraBite\'s Development')
+    .addField(`invite`, 'Gives you a link to invite TerraBite to your server')
+    .addField(`ping`, 'Gives you the latency of TerraBite')
+    .addField(`uptime`, 'Gives you the uptime of TerraBite');
     message.author.send({embed: info});
 
     const util = new Discord.RichEmbed()
@@ -182,11 +182,11 @@ donate    invite    ping    uptime
     .setTitle("Admin Commands")
     .setDescription("Commands to help with Administration (Requires `Bot Admin` role)")
     .setColor(hexcols[~~(Math.random() * hexcols.length)])
-    .addField(`say [channel] <message>`, 'Makes Timiki speak in the specified channel')
+    .addField(`say [channel] <message>`, 'Makes TerraBite speak in the specified channel')
     .addField(`ban <user> <reason>`, 'Bans the mentioned user (Needs `mod-log` channel)')
     .addField(`lockdown <time (h, m, s)>`, 'locks down the current channel for the given amount of time')
     .addField(`unpunish <user> <reason>`, 'Clears the user of all their warnings and kicks')
-    .addField(`setprefix <New Prefix>`, 'Sets the Timiki\'s prefix for the server')
+    .addField(`setprefix <New Prefix>`, 'Sets the TerraBite\'s prefix for the server')
     .addField(`queue clear`, 'Clears the Music Queue');
     message.author.send({embed: admin});
 

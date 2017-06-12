@@ -1,4 +1,4 @@
-//Timiki Discord Bot by Harry aka haxmat
+//TerraBite Discord Bot by the TerraBite Dev Group
 const opus = require('node-opus');
 const yt = require('ytdl-core');
 const sql = require('sqlite');

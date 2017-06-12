@@ -5,10 +5,10 @@ exports.run = async function (client, message, args) {
   const hexcols = [0xFFB6C1, 0x4C84C0, 0xAD1A2C, 0x20b046, 0xf2e807, 0xf207d1, 0xee8419];
 
   const embed = new Discord.RichEmbed()
-  .setTitle("Donate to Timiki")
+  .setTitle("Donate to TerraBite")
   .setColor(hexcols[~~(Math.random() * hexcols.length)])
-  .setDescription(`To donate to Timiki and help cover the running costs. Please visit the link below`)
-  .addField(`Donate Here`, `[Patreon](https://www.patreon.com/haxmatose)`);
+  .setDescription(`To donate to TerraBite and help cover the running costs. Please visit the link below`)
+  .addField(`Donate Here`, `[Patreon](https://terrabite.cf)`);
 
   message.channel.send({embed: embed});
 };
@@ -22,6 +22,6 @@ exports.settings = {
 
 exports.about = {
   name: 'donate',
-  description: 'Lets you support Timiki\'s Development',
+  description: 'Lets you support TerraBite\'s Development',
   usage: 'donate'
 };
