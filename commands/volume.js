@@ -89,7 +89,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['vol'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
