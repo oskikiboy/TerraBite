@@ -33,27 +33,27 @@ module.exports = async client => { // When the client is ready it will log to th
   function changePlaying() { // The function to change the playing status randomly
     switch (Math.floor(Math.random() * 9)) { // Random number generator
       case 0:
-        client.user.setGame(`on ${client.guilds.size} guilds | ${config.prefix}prefix`);
+        client.user.setGame(`on ${client.guilds.size} guilds | ${config.prefix}help`);
       case 1:
-        client.user.setGame(`with ${client.users.size} users! | ${config.prefix}prefix`);
+        client.user.setGame(`with ${client.users.size} users! | ${config.prefix}help`);
       case 2:
-        client.user.setGame(`( ͡° ͜ʖ ͡°) | ${config.prefix}prefix`);
+        client.user.setGame(`( ͡° ͜ʖ ͡°) | ${config.prefix}help`);
       case 3:
-        client.user.setGame(`ಠ_ಠ | ${config.prefix}prefix`);
+        client.user.setGame(`ಠ_ಠ | ${config.prefix}help`);
       case 4:
-        client.user.setGame(`(ᵔᴥᵔ) | ${config.prefix}prefix`);
+        client.user.setGame(`(ᵔᴥᵔ) | ${config.prefix}help`);
         break;
       case 5:
-        client.user.setGame(`with a HDD | ${config.prefix}prefix`);
+        client.user.setGame(`with a HDD | ${config.prefix}help`);
         break;
       case 6:
-        client.user.setGame(`cookies! | ${config.prefix}prefix`);
+        client.user.setGame(`cookies! | ${config.prefix}help`);
         break;
       case 7:
-        client.user.setGame(`in a lab | ${config.prefix}prefix`);
+        client.user.setGame(`in a lab | ${config.prefix}help`);
         break;
       case 8:
-        client.user.setGame(`with code | ${config.prefix}prefix`);
+        client.user.setGame(`with code | ${config.prefix}help`);
     }
   };
 };
