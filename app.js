@@ -114,25 +114,18 @@ try {
 }
 
 client.elevation = message => {
-  if (message.channel.type == "dm") {
-    let permlvl = 1;
-    if (message.author.id === config.owner) permlvl = 4;
-  } else {
-    permlvl = 1;
-    let controller_role = message.guild.roles.find(r => r.name.toUpperCase() === config.controller_role_name);
-    if (controller_role && message.member.roles.has(controller_role.id)) {
-      permlvl = 2;
-    };
-    let administrator_role = message.guild.roles.find(r => r.name.toUpperCase() === config.administrator_role_name);
-    let ownerId = message.guild.ownerId;
-    if (administrator_role && message.member.roles.has(administrator_role.id) || message.author.id == message.guild.ownerId) {
-      permlvl = 3;
-    };
-    if (message.author.id === config.owner) {
-      permlvl = 4;
-    };
-    return permlvl;
-  }
+  var permlvl = 0;
+  if(!message.guild) return;
+  let modrole = message.guild.roles.find("name", config.controller_role_name)
+  if(modrole && message.member.roles.has(modrole.id)) permlvl = 2; // If the member has the mod role, will his/her permlvl be 2
+  let adminrole = message.guild.roles.find("name", config.administrator_role_name)
+  if(adminrole && message.member.roles.has(adminrole.id)) permlvl = 4; // If the member has the admin role, will his/her permlvl be 4
+  if(message.member.hasPermission("ADMINISTRATOR")) permlvl = 6; // Everyone with the Admin perm will have perm lvl 6
+  if(message.author.id === message.guild.owner.id) permlvl = 8; // The owner of the server will have perm lvl 8
+  if(config.developers.includes(message.author.id)) permlvl = 10; // The developers will have perm lvl 10
+  if(config.owners.includes(message.author.id)) permlvl = 20; // The owners will have perm lvl 20
+  return permlvl; // Returning the system.
+
 };
 
 try {
