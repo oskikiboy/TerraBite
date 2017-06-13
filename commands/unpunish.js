@@ -82,7 +82,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['clearname', 'clear'],
-  permlevel: 3
+  permlevel: 4
 };
 
 exports.about = {
