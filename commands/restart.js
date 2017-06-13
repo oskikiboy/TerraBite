@@ -14,7 +14,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: ['rstart'],
-  permlevel: 4
+  permlevel: 10
 };
 
 exports.about = {
