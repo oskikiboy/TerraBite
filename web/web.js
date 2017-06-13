@@ -1,7 +1,5 @@
 const requestify = require('requestify');
 const moment = require('moment');
-const utils = require('../utils/utils');
-const botUtils = require('../utils/botUtils');
 const express = require('express');
 const fs = require('fs');
 var path = require('path');
@@ -18,10 +16,6 @@ module.exports = function (app, config) {
 
             let uptime = process.uptime();
     res.render('index', {
-        rawUptime: moment.duration(uptime, 'seconds').humanize(),
-        roundedUptime: utils.getRoundedUptime(uptime),
-        rawUserCount: botUtils.getTotalUsers(),
-        rawServerCount: botUtils.getTotalGuilds()
     })
 } catch (err) {
         renderErrorPage(req, res, err);
