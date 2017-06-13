@@ -83,7 +83,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['prefixset'],
-  permlevel: 3
+  permlevel: 4
 };
 
 exports.about = {
