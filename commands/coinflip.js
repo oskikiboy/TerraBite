@@ -23,7 +23,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: ['coin', 'flip'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
