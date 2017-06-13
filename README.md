@@ -8,3 +8,5 @@
  All The dependencies from the package.json must be installed using 'npm install' without quotes
  The 'start_sharding.js' file is to start TerraBite using sharding (Main purpose is to make an easy transition "if" TerraBite reaches over 2000 servers)
 TerraBite must be started twice. Once to create the database. The other so it runs properly.
+
+### Join the Support server [here](https://discord.gg/yBTUR)
