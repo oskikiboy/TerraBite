@@ -44,7 +44,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['shank'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
