@@ -31,7 +31,7 @@ exports.settings = { // Settings for the command
   enabled: true, // Whether or not the command is enabled
   guildOnly: true, // Whether or not this command works in a PM
   aliases: [], // The aliases for the command
-  permlevel: 1 // The Minimum perm level required to use the command
+  permlevel: 0 // The Minimum perm level required to use the command
 };
 
 exports.about = {
