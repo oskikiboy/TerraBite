@@ -9,7 +9,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['add'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
