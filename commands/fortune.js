@@ -29,7 +29,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: ['prophecy', 'oracle'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
