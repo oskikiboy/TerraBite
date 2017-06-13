@@ -14,7 +14,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['mc'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
