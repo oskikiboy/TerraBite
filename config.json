@@ -1,0 +1,16 @@
+
+{
+  "prefix": "/",
+  "secret":"BC6FVDqWUBEkWiJgU1a5K6ku1x4n6dTB",
+  "owner": "193972602392281088",
+  "token": "MzIxOTA5OTY1MjAxNjA0NjEx.DBk5iQ.syG1pdPr8Pg5AHhFcmSnGq5vWaE",
+  "client_id": "321909965201604611",
+  "controller_role_name": "Bot Operator",
+  "administrator_role_name": "Administrator",
+  "clbotkey": "",
+  "gapikey": "AIzaSyBXk8E6cttMfLElTVMpll1ahSukn1jhwrQ",
+  "discordbotstoken": "",
+  "invitelink": "https://discordapp.com/oauth2/authorize?client_id=321909965201604611&scope=bot&permissions=2146958463",
+  "botsdiscordtoken": "",
+  "server_port": "8080"
+}

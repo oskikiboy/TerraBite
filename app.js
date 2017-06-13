@@ -13,13 +13,12 @@ var shards = new Discord.ShardClientUtil(client);
 const config = require('./config.json');
 const fs = require('fs');
 const moment = require('moment');
+const express = require('express');
+const app = exports.app = express();
+const http = require('http');
+let connection;
 
-var path = require('path')
-var connect = require('connect');
-var serveStatic = require('serve-static');
-connect().use(serveStatic(path.join(__dirname, 'web'))).listen(8080, function(){
-    console.log('Server running on 8080...');
-});
+const web = exports.web = require('./web/web');
 
 figlet('TerraBite', function(err, data) {
     if (err) {
@@ -30,7 +29,10 @@ figlet('TerraBite', function(err, data) {
     console.log(data)
 });
 
+
+
 require('./utils/eventLoader.js')(client);
+require('./web/web.js');
 
 client.login(config.token);
 
@@ -106,6 +108,12 @@ client.reload = command => {
   });
 };
 
+try {
+    web(app, config);
+}catch (err) {
+    console.error(`An error occurred during module initialisation, Error: ${err.stack}`);
+}
+
 client.elevation = message => {
   if (message.channel.type == "dm") {
     let permlvl = 1;
@@ -127,3 +135,20 @@ client.elevation = message => {
     return permlvl;
   }
 };
+
+try {
+    const httpServer = http.createServer(app);
+    httpServer.listen(config.server_port, (err) => {
+        if (err) {
+            console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
+            return;
+        }
+        console.info(`Successfully started server..listening on port ${config.server_port}`);
+})
+}catch (err){
+    console.error(`Error starting up server, Error: ${err.stack}`)
+}
+
+process.on('uncaughtException', (err) => {
+    console.error('Uncaught Exception' + err.stack);
+});

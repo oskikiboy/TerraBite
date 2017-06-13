@@ -32,7 +32,7 @@ exports.run = async function (client, message, args) {
   embed.addField("Ram Usage", `${parseFloat(Math.round(usingmemmb * 100) / 100).toFixed(2)}MB / ${parseFloat(Math.round(totalrammb * 100) / 100).toFixed(2)}MB`, true)
   embed.addField("Uptime", `${uptime()}`, true)
   embed.addField("Ping", `${ping}ms`, true)
-  embed.addField("Site", `[Click Link](https://discordbots.org/bot/295942672890331147)`, true)
+  embed.addField("Site", `[Click Link](https://terrabite.cf)`, true)
       .setColor(hexcols[~~(Math.random() * hexcols.length)]);
 
   return message.channel.send({embed: embed});
