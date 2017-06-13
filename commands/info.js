@@ -42,7 +42,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: ['botinfo', 'stats', 'status'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
