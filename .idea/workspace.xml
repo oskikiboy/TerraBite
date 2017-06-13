@@ -2,78 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44a971b-9873-4a56-9789-6b31c313a04c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/css/bulma.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/css/bulma.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/HELP-US-OUT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/font-mfizz/font-mfizz.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/font-mfizz/font-mfizz.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/font-mfizz/font-mfizz.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/font-mfizz/font-mfizz.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/font-mfizz/font-mfizz.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/font-mfizz/preview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/screen-reader.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/fonts/Socicon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/fonts/Socicon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/fonts/Socicon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/fonts/Socicon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/fonts/Socicon.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/readme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/style.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/fonts/socicon/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/img/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/js/blog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/js/miny-part/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/js/miny-part/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/js/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/js/particles.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/blog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/data/blog_posts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/wip.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/info.js" afterPath="$PROJECT_DIR$/commands/info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/botUtils.js" afterPath="$PROJECT_DIR$/utils/botUtils.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,17 +19,17 @@
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="13" />
+              <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/web.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -109,17 +39,17 @@
         <entry file="file://$PROJECT_DIR$/web/views/error.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="281">
-              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+              <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="botUtils.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="botUtils.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/botUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -129,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/utils/utils.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -138,8 +68,8 @@
       <file leaf-file-name="info.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands/info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -191,6 +121,7 @@
     <findStrings>
       <find>assets</find>
       <find>read</find>
+      <find>users</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,10 +140,10 @@
         <option value="$PROJECT_DIR$/web/views/index.ejs" />
         <option value="$PROJECT_DIR$/commands/info.js" />
         <option value="$PROJECT_DIR$/utils/utils.js" />
-        <option value="$PROJECT_DIR$/utils/botUtils.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/web/views/error.ejs" />
         <option value="$PROJECT_DIR$/web/web.js" />
+        <option value="$PROJECT_DIR$/utils/botUtils.js" />
       </list>
     </option>
   </component>
@@ -458,12 +389,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497333578405</updated>
-      <workItem from="1497333580939" duration="7048000" />
+      <workItem from="1497333580939" duration="8135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7048000" />
+    <option name="totallyTimeSpent" value="8135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -562,26 +493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commands/info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/botUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -589,7 +504,7 @@
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="13" />
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -605,7 +520,7 @@
     <entry file="file://$PROJECT_DIR$/web/views/error.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
-          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+          <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -613,7 +528,23 @@
     <entry file="file://$PROJECT_DIR$/web/web.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/botUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding />
         </state>
       </provider>
