@@ -78,7 +78,6 @@ fs.readdir('./commands/', (err, files) => {
   log(`Loading ${files.length} commands`);
   files.forEach(fname => {
     let props = require(`./commands/${fname}`);
-    log(`Loading Command; ${props.about.name}`);
     client.commands.set(props.about.name, props);
     props.settings.aliases.forEach(alias => {
       client.aliases.set(alias, props.about.name);
@@ -109,7 +108,7 @@ client.reload = command => {
 };
 
 try {
-    web(app, config);
+    web(app, config, client);
 }catch (err) {
     console.error(`An error occurred during module initialisation, Error: ${err.stack}`);
 }

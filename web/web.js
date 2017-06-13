@@ -3,8 +3,10 @@ const moment = require('moment');
 const express = require('express');
 const fs = require('fs');
 var path = require('path');
+const Discord = require("discord.js");
+const bot = new Discord.Client();
 
-module.exports = function (app, config) {
+module.exports = function (app, config, client) {
 
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
@@ -13,9 +15,22 @@ module.exports = function (app, config) {
 
     app.get('/', (req, res) => {
         try {
+            function format(seconds){
+        function pad(s){
+            return (s < 10 ? '0' : '') + s;
+        }
+        var hours = Math.floor(seconds / (60*60));
+        var minutes = Math.floor(seconds % (60*60) / 60);
+        var seconds = Math.floor(seconds % 60);
+
+        return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+    }
 
             let uptime = process.uptime();
     res.render('index', {
+        botuptime: format(uptime),
+        guildamount: client.guilds.size,
+        useramount: client.users.size,
     })
 } catch (err) {
         renderErrorPage(req, res, err);
