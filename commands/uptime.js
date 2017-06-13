@@ -29,7 +29,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: ['utime'],
-  permLevel: 1
+  permLevel: 0
 };
 
 exports.about = {
