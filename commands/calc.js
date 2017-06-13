@@ -40,7 +40,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: ['m', 'math', 'maths', 'calculation'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
