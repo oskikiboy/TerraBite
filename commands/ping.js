@@ -26,7 +26,7 @@ exports.settings = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
