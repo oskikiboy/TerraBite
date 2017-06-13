@@ -49,7 +49,7 @@ exports.settings = {
   enabled: true,
   guildOnly: true,
   aliases: ['exit'],
-  permlevel: 1
+  permlevel: 0
 };
 
 exports.about = {
