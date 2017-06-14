@@ -4,7 +4,7 @@ function writeBlogPosts() {
 
     var xhrBlogPosts = new XMLHttpRequest();
     xhrBlogPosts.overrideMimeType("application/json");
-    xhrBlogPosts.open('GET', '/data/blog_posts.json');
+    xhrBlogPosts.open('GET', 'https://raw.githubusercontent.com/TerraBite-Development-Team/TerraBite/development/data/blog_posts.json');
     xhrBlogPosts.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
