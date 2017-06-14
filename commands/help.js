@@ -42,7 +42,7 @@ stab  rate  diceroll  8ball image  calc
 :information_source: Information\n
 \`\`\`
 help  stats   membercount   userinfo    weather
-donate    invite    ping    uptime
+website    invite    ping    uptime
 \`\`\``).then(m => {
       m.awaitReactions((reaction, user) => user.id === author.id, {
         max: 1,
@@ -153,7 +153,7 @@ donate    invite    ping    uptime
     .addField(`membercount`, 'Shows the membercount for the current server')
     .addField(`userinfo <user>`, 'Shows you info about the mentioned user. Warns, Kicks, etc..')
     .addField(`weather <location>`, 'Shows you the weather forecast for the location specified')
-    .addField(`donate`, 'Gives you a link to support TerraBite\'s Development')
+    .addField(`website`, 'Gives you a link to TerraBite\'s Website')
     .addField(`invite`, 'Gives you a link to invite TerraBite to your server')
     .addField(`ping`, 'Gives you the latency of TerraBite')
     .addField(`uptime`, 'Gives you the uptime of TerraBite');
