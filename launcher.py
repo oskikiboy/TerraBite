@@ -19,7 +19,7 @@ def linux_startup():
     signal.signal(signal.SIGINT, sig_handler)
     os.system("pm2 logs index")
     
-def linux_startup():
+def mac_startup():
     print("Operating System is " + platform.system())
     print("Starting Bot")
     os.system("pm2 start index.js")
