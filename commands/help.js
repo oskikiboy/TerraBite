@@ -42,7 +42,7 @@ stab  rate  diceroll  8ball image  calc
 :information_source: Information\n
 \`\`\`
 help  stats   membercount   userinfo    weather
-donate    invite    ping    uptime
+website    invite    ping    uptime
 \`\`\``).then(m => {
       m.awaitReactions((reaction, user) => user.id === author.id, {
         max: 1,
@@ -157,6 +157,7 @@ donate    invite    ping    uptime
     .addField(`invite`, 'Gives you a link to invite TerraBite to your server')
     .addField(`ping`, 'Gives you the latency of TerraBite')
     .addField(`uptime`, 'Gives you the uptime of TerraBite');
+    .addField(`askdevs`, 'Sends a question to the bot developers.');
     message.author.send({embed: info});
 
     const util = new Discord.RichEmbed()
