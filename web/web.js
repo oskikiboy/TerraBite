@@ -13,7 +13,7 @@ module.exports = function (app, config, client, req) {
 
     app.use(express.static(path.join(__dirname, 'static')));
 
-    app.get('/', (req, res) => {
+    app.get("/", (req, res) => {
         try {
             function format(seconds){
         function pad(s){

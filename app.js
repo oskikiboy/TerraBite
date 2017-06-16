@@ -18,17 +18,19 @@ const app = exports.app = express();
 const http = require('http');
 let connection;
 
+var asciiart = `
+╭━━━━╮╱╱╱╱╱╱╱╱╭━━╮╱╭╮
+┃╭╮╭╮┃╱╱╱╱╱╱╱╱┃╭╮┃╭╯╰╮
+╰╯┃┃┣┻━┳━┳━┳━━┫╰╯╰╋╮╭╋━━╮
+╱╱┃┃┃┃━┫╭┫╭┫╭╮┃╭━╮┣┫┃┃┃━┫
+╱╱┃┃┃┃━┫┃┃┃┃╭╮┃╰━╯┃┃╰┫┃━┫
+╱╱╰╯╰━━┻╯╰╯╰╯╰┻━━━┻┻━┻━━╯
+
+`
+
+console.log(`Starting \n` + asciiart);
+
 const web = exports.web = require('./web/web');
-
-figlet('TerraBite', function(err, data) {
-    if (err) {
-        console.log('Something went wrong...');
-        console.dir(err);
-        return;
-    }
-    console.log(data)
-});
-
 
 
 require('./utils/eventLoader.js')(client);
