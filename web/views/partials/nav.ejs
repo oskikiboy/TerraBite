@@ -1,0 +1,62 @@
+<nav class="nav has-shadow">
+    <div class="nav-left">
+        <a class="nav-item" href="https://discordapp.com/invite/JJAy6qw">
+            <img src="/img/icon.png" alt="Logo" style="border-radius: 4px;"> &nbsp;
+            <span>TerraBite</span>
+        </a>
+    </div>
+    <div class="nav-center">
+        <a class="nav-item" href="https://discordapp.com/invite/JJAy6qw">
+            <span class="icon">
+                <i class="fa socicon-discord"></i>
+            </span>
+        </a>
+        <a class="nav-item" href="wipl>
+            <span class="icon">
+                <i class="fa fa-check"></i>
+            </span>
+        </a>
+        <a class="nav-item" href="https://github.com/TerraBite-Development-Team/TerraBite">
+            <span class="icon">
+                <i class="fa fa-github" style="padding-top: 2px;"></i>
+            </span>
+        </a>
+    </div>
+    <div class="nav-right nav-menu" id="nav-">
+        <a class="nav-item is-active">
+            Home
+        </a>
+        <a class="nav-item is-active" href="wip" id="nav-docs">
+            Documentation
+        </a>
+        <a class="nav-item is-active" href="blog" id="nav-blog">
+            Blog
+        </a>
+        <p class="nav-item control has-addons">
+            <a class="button is-white is-outlined" href="/add">
+                            <span class="icon is-small">
+                                <i class="fa fa-plus"></i>
+                            </span>
+                <span>Add</span>
+            </a>
+            <a class="button is-dark is-outlined" href="https://discordapp.com/invite/JJAy6qw" style="margin-left: 0px;">
+                            <span class="icon is-small">
+                                <i class="fa fa-handshake-o"></i>
+                            </span>
+                <span>Support</span>
+            </a>
+        </p>
+    </div>
+    <span class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+</nav>
+<script>
+    var currentPage = window.location.pathname.split("/")[1];
+    var currentNavItem = $("#nav-" + currentPage);
+    if(currentNavItem) {
+        currentNavItem.addClass("is-tab");
+    }
+</script>

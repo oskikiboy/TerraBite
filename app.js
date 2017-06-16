@@ -110,7 +110,7 @@ client.reload = command => {
 try {
     web(app, config, client);
 }catch (err) {
-    console.error(`An error occurred during module initialisation, Error: ${err.stack}`);
+    console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
 }
 
 client.elevation = message => {

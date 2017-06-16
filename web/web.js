@@ -6,7 +6,7 @@ var path = require('path');
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-module.exports = function (app, config, client) {
+module.exports = function (app, config, client, req) {
 
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
@@ -26,14 +26,16 @@ module.exports = function (app, config, client) {
         return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
     }
 
-            let uptime = process.uptime();
+    let uptime = process.uptime();
     res.render('index', {
         botuptime: format(uptime),
         guildamount: client.guilds.size,
         useramount: client.users.size,
+        title: 'TerraBite &bull; Home',
     })
 } catch (err) {
         renderErrorPage(req, res, err);
+        console.error(`Unable to load home page, Error ${err.stack}`);
     }
 });
 
@@ -42,6 +44,7 @@ module.exports = function (app, config, client) {
         try {
 
             res.render('blog', {
+                title: 'Terrabite &bull; Blog'
         })
 
     } catch (err) {
@@ -50,15 +53,29 @@ module.exports = function (app, config, client) {
     }
 });
 
+    app.get('/add', (req, res, config) => {
+
+        try {
+
+            res.redirect(config.invitelink);
+
+        } catch (err) {
+            console.error(`Unable to load add page, Error: ${err.stack}`);
+            renderErrorPage(req, res, err);
+    }
+
+});
+    // Work in progress
     app.get('/wip', (req, res) => {
 
         try {
 
             res.render('wip', {
+                title: 'TerraBite &bull; WIP'
         })
 
     } catch (err) {
-        console.error(`Unable to load blog page, Error: ${err.stack}`);
+        console.error(`Unable to load WIP page, Error: ${err.stack}`);
         renderErrorPage(req, res, err);
     }
 });
@@ -69,7 +86,7 @@ module.exports = function (app, config, client) {
             res.render('error', {
             error_code: 500,
             error_text: "Why did you go to this URL? Normally an error message will be displayed here.",
-            googleAnalyticsCode: config.googleAnalyticsCode
+            title: 'TerraBite &bull; Error'
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
@@ -83,6 +100,7 @@ module.exports = function (app, config, client) {
             res.render('error', {
                 error_code: 404,
                 error_text: "The page you requested could not be found or rendered. Please check your request URL for spelling errors and try again. If you believe this error is faulty, please contact a system administrator.",
+                title: 'TerraBite &bull; Error'
             })
         } catch (err) {
             console.error(`An error has occurred trying to load the 404 page, Error: ${err.stack}`);
