@@ -1,31 +1,28 @@
-
 import os
 import signal
 import sys
 import platform
 
 def windows_startup():
-    print("Operating System is " + platform.system())
-    print("Starting Bot For Windows System")
+    print("Operating System is Windows")
     print("Starting Bot")
-    os.system("pm2 start index.js")
+    os.system("pm2 start app.js --name=TerraBite")
     signal.signal(signal.SIGINT, sig_handler)
-    os.system("pm2 logs index")
+    os.system("pm2 logs TerraBite")
 
 def linux_startup():
-    print("Operating System is " + platform.system())
+    print("Operating System is Linux")
     print("Starting Bot")
-    os.system("pm2 start index.js")
+    os.system("pm2 start app.js --name=TerraBite")
     signal.signal(signal.SIGINT, sig_handler)
     os.system("pm2 logs index")
     
 def mac_startup():
-    print("Operating System is " + platform.system())
+    print("Operating System is MacOS or Darwin")
     print("Starting Bot")
-    os.system("pm2 start index.js")
+    os.system("pm2 start app.js --name=TerraBite")
     signal.signal(signal.SIGINT, sig_handler)
-    os.system("pm2 logs index")
-
+    os.system("pm2 logs TerraBite")
 
 if len(sys.argv) > 1:
     if sys.argv[1] == "install":
@@ -33,7 +30,6 @@ if len(sys.argv) > 1:
         os.system("npm install")
         print("Installing PM2")
         os.system("npm install -g pm2")
-
 
 print("""                                                                                          
     __    ____  ___    ____  _____   ________             
@@ -57,10 +53,12 @@ if platform.system() == "Windows":
           windows_startup()
 elif platform.system() == "Linux":
           linux_startup()
-elif platform.system() == "macosx":
+elif platform.system() == "Darwin":
           mac_startup()
           
 else:
-          print("Unknown Operating System. Please use either Linux, Mac or Windows")
-
-print("The Bot is Running. Press CTRL+C to Exit")
+    print("Operating System is " + platform.system())
+    print("Starting Bot")
+    os.system("pm2 start app.js --name=TerraBite")
+    signal.signal(signal.SIGINT, sig_handler)
+    os.system("pm2 logs TerraBite")

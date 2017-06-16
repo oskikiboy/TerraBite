@@ -45,7 +45,7 @@
             top: 0;  
             left: 0;
             width: 100%;
-            height: 400px;
+            height: 500px;
         }
 
         .banner {
@@ -98,16 +98,19 @@
         .front {
             z-index: 5000000;
         }
+        .terrasize {
+            height: 500px;
+        }
     </style>
     <body>
         <div id="particles-js" class="is-hidden-mobile">
         </div>
-        <section class="hero is-dark is-medium banner" style="z-index: -5;">
+        <section class="hero is-dark is-medium banner terrasize" style="z-index: -5;">
             <div class="hero-head">
                 <% include ./partials/nav %>
             </div>
             <div class="hero-body">
-                <div id="container" style="z-index: 50;position: absolute;" class="is-hidden-mobile">
+                <div class="container is-hidden-mobile">
                     <div class="columns">
                         <img id="logo" src="/img/icon.png">
                         <div class="column is-9">

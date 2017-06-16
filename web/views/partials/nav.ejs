@@ -23,13 +23,13 @@
         </a>
     </div>
     <div class="nav-right nav-menu">
-        <a class="nav-item is-active" id="nav-" href="/">
+        <a class="nav-item" id="nav-" href="/">
             Home
         </a>
-        <a class="nav-item is-active" href="wip" id="nav-docs">
+        <a class="nav-item" href="wip" id="nav-docs">
             Documentation
         </a>
-        <a class="nav-item is-active" href="blog" id="nav-blog">
+        <a class="nav-item" href="blog" id="nav-blog">
             Blog
         </a>
         <p class="nav-item control has-addons">
@@ -39,7 +39,7 @@
                             </span>
                 <span>Add</span>
             </a>
-            <a class="button is-dark is-outlined" href="https://discordapp.com/invite/JJAy6qw" style="margin-left: 0px;">
+            <a class="button is-dark is-outlined" href="<%= support %>" style="margin-left: 0px;">
                             <span class="icon is-small">
                                 <i class="fa fa-handshake-o"></i>
                             </span>
@@ -57,6 +57,6 @@
     var currentPage = window.location.pathname.split("/")[1];
     var currentNavItem = $("#nav-" + currentPage);
     if(currentNavItem) {
-        currentNavItem.addClass("is-tab");
+        currentNavItem.addClass("is-active is-tab");
     }
 </script>

@@ -32,6 +32,7 @@ module.exports = function (app, config, client, req) {
         guildamount: client.guilds.size,
         useramount: client.users.size,
         title: 'TerraBite &bull; Home',
+        support: config.support
     })
 } catch (err) {
         renderErrorPage(req, res, err);
@@ -44,7 +45,8 @@ module.exports = function (app, config, client, req) {
         try {
 
             res.render('blog', {
-                title: 'Terrabite &bull; Blog'
+                title: 'Terrabite &bull; Blog',
+                support: config.support,
         })
 
     } catch (err) {
