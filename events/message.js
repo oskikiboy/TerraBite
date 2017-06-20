@@ -39,7 +39,7 @@ if (message.content.startsWith(`<@${client.user.id}>`) || message.content.starts
 
   if(message.content.toLowerCase().startsWith(config.prefix + "prefix")) {
     if(message.channel.type == "dm") {
-      return message.channel.send('To use commands in DM Use the Prefix `%`');
+      return message.channel.send('To use commands in DM Use the Prefix \`' + "`${config.prefix}`\`");
     }
     if(!message.channel.permissionsFor(client.user).has('EMBED_LINKS')) return message.channel.send('I Require the `EMBED_LINKS` permission!');
     message.channel.send('', {
