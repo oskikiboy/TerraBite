@@ -22,6 +22,7 @@
   "gapikey": "",
   "discordbotstoken": "",
   "invitelink": "https://discordapp.com/oauth2/authorize?client_id=321909965201604611&scope=bot&permissions=2146958463",
+  "hexcols": [0xFFB6C1, 0x4C84C0, 0xAD1A2C, 0x20b046, 0xf2e807, 0xf207d1, 0xee8419],   //TODO: UPDATE ALL FILES TO RETREIVE COLOURS FROM THE JSON FILE
   "botsdiscordtoken": "",
   "server_port": "8080",
   "maintenance": false,
