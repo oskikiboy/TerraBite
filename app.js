@@ -38,9 +38,7 @@ if (config.maintenance) {
   console.error(`Failed to display startup message ${err.stack}`)
 }
 
-while (config.maintenance) {
 
-}
     const web = exports.web = require('./web/web');
 
 
