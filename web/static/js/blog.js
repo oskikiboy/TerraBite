@@ -66,8 +66,7 @@ function loadPosts() {
         titleArea.appendChild(spanSpace);
 
         let tagSpan = document.createElement("span");
-        tagSpan.setAttribute("class", "tag is-medium");
-        tagSpan.setAttribute("class", tag_type);
+        tagSpan.setAttribute("class", "tag is-medium", tag_type);
         let tagText = document.createTextNode(tag_text);
         tagSpan.appendChild(tagText);
         titleArea.appendChild(tagSpan);
