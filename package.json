@@ -6,6 +6,7 @@
   "author": "TerraBite Development Group",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "cleverbot-node": "^0.3.10",
     "cluster": "^0.7.7",
     "colors": "^1.1.2",
@@ -14,6 +15,7 @@
     "express": "^4.15.3",
     "figlet": "^1.2.0",
     "g-i-s": "^2.0.0",
+    "maintenance": "0.0.2",
     "mathjs": "^3.13.3",
     "mkdirp": "^0.5.1",
     "moment": "^2.18.1",

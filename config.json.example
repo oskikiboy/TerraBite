@@ -23,5 +23,7 @@
   "discordbotstoken": "",
   "invitelink": "https://discordapp.com/oauth2/authorize?client_id=321909965201604611&scope=bot&permissions=2146958463",
   "botsdiscordtoken": "",
-  "server_port": "8080"
+  "server_port": "8080",
+  "maintenance": false,
+  "maintenance_msg": "Updating the code..."
 }

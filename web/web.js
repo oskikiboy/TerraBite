@@ -11,6 +11,22 @@ module.exports = function (app, config, client, req) {
 
     app.use(express.static(path.join(__dirname, 'static')));
 
+    // Maintenance mode
+    app.use(function (req, res, next) {
+        if (config.maintenance === true) {
+
+            // Need this condition to avoid redirect loop
+            if (req.url !== '/maintenance') {
+                res.redirect('/maintenance');
+            } else {
+                next();
+            }
+            return
+        } else {
+            next();
+        }
+    });
+
     app.get("/", (req, res) => {
         try {
             function format(seconds){
@@ -79,6 +95,18 @@ module.exports = function (app, config, client, req) {
         renderErrorPage(req, res, err);
     }
 });
+    app.get("/maintenance", (req, res) => {
+        try {
+            res.render('maintenance', {
+            error_code: 503,
+            message: config.maintenance_msg,
+            title: 'TerraBite &bull; Error'
+        })
+    } catch (err) {
+        console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
+        renderErrorPage(req, res, err);
+    }
+});
 
     // Error
     app.get("/error", (req, res) => {
@@ -106,8 +134,7 @@ module.exports = function (app, config, client, req) {
             console.error(`An error has occurred trying to load the 404 page, Error: ${err.stack}`);
             renderErrorPage(req, res, err);
         }
-    })
-
+    });
 };
 
 function renderErrorPage(req, res, err, errorText) {
