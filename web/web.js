@@ -3,8 +3,6 @@ const moment = require('moment');
 const express = require('express');
 const fs = require('fs');
 var path = require('path');
-const Discord = require("discord.js");
-const bot = new Discord.Client();
 
 module.exports = function (app, config, client, req) {
 

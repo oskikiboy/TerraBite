@@ -32,6 +32,7 @@ function loadPosts() {
         var tag_text = blogPosts[x].tag_text;
         var post_date = blogPosts[x].post_date;
         var post_content = blogPosts[x].post_content;
+        var tag_type = blogPosts[x].tag_type;
 
         let blogPost = document.createElement("div");
         blogPost.setAttribute("class", "box");
@@ -65,7 +66,8 @@ function loadPosts() {
         titleArea.appendChild(spanSpace);
 
         let tagSpan = document.createElement("span");
-        tagSpan.setAttribute("class", "tag is-medium is-info");
+        tagSpan.setAttribute("class", "tag is-medium");
+        tagSpan.setAttribute("class", tag_type);
         let tagText = document.createTextNode(tag_text);
         tagSpan.appendChild(tagText);
         titleArea.appendChild(tagSpan);

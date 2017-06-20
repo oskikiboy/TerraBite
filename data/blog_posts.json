@@ -5,14 +5,25 @@
     "author_username": "<span style=\"color: #363636;\">oskikiboy</span>",
     "tag_text": "Update",
     "post_date": "Tuesday the 6th of June, 2017",
-    "post_content": "Started working on a blog page"
+    "post_content": "Started working on a blog page",
+    "tag_type": "is-primary"
   },
   {
     "post_title": "Documentation!",
     "author_url": "https://cdn.discordapp.com/avatars/229232856063410176/05ed767353dc5e24d79666ad1220e1f6.png?size=2048",
     "author_username": "<span style=\"color: #363636;\">motasim</span>",
     "tag_text": "Work in Progress",
-    "post_date": "Wednesday the 7 of June, 2017",
-    "post_content": "Started working on the documentation page"
+    "post_date": "Wednesday the 7th of June, 2017",
+    "post_content": "Started working on the documentation page",
+    "tag_type": "is-info"
+  },
+  {
+    "post_title": "Web control panel",
+    "author_url": "https://oskikiboy.me/img/icon.png",
+    "author_username": "<span style=\"color: #363636;\">oskikiboy</span>",
+    "tag_text": "Work in Progress",
+    "post_date": "Tuesday the 20th of June, 2017",
+    "post_content": "Started working on the web control panel.",
+    "tag_type": "is-info"
   }
 ]

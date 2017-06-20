@@ -8,7 +8,6 @@ const os = require('os');
 const client = new Discord.Client({
   autoreconnect: true
 });
-var figlet = require('figlet');
 var shards = new Discord.ShardClientUtil(client);
 const config = require('./config.json');
 const fs = require('fs');
