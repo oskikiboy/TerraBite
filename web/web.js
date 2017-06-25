@@ -11,6 +11,8 @@ module.exports = function (app, config, client, req) {
 
     app.use(express.static(path.join(__dirname, 'static')));
 
+    var invitelink = config.botinvite;
+
     // Maintenance mode
     app.use(function (req, res, next) {
         if (config.maintenance === true) {
@@ -72,8 +74,10 @@ module.exports = function (app, config, client, req) {
     app.get('/add', (req, res, config) => {
 
         try {
-
-            res.redirect(config.invitelink);
+            //borked
+            res.redirect(
+                'https://discordapp.com/oauth2/authorize?client_id=321909965201604611&scope=bot&permissions=2146958463'
+        );
 
         } catch (err) {
             console.error(`Unable to load add page, Error: ${err.stack}`);
