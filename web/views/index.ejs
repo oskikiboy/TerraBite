@@ -93,10 +93,18 @@
         }
 
         .front {
+            position: fixed;
             z-index: 5000000;
+            width: 100%;
         }
     </style>
     <body>
+    <div class="notification is-danger" style="border-radius: 0px;" id="notification">
+        <button class="delete"></button>
+        <div class="has-text-centered">
+            Help us out with Oauth2! Join the <a href="<%= support %>" class="ded">server</a> and the <a href="#team">development</a> team to help out!
+        </div>
+    </div>
         <div id="particles-js" class="is-hidden-mobile">
         </div>
         <section class="hero is-dark is-fullheight banner" style="z-index: -5;">
@@ -104,7 +112,7 @@
                 <% include ./partials/nav %>
             </div>
             <div class="hero-body">
-                <div id="container" style="z-index: 50;position: absolute;" class="is-hidden-mobile">
+                <div style="z-index: 50;margin-left: 25%;" class="container is-hidden-mobile">
                     <div class="columns">
                         <img id="logo" src="/img/icon.png">
                         <div class="column is-9">
@@ -180,7 +188,7 @@
                 </div>
             </div>
         </section>
-        <section class="hero is-black">
+        <section class="hero is-black" id="team">
             <br>
             <div class="container has-text-centered box">
                 <div class="heading">
@@ -321,5 +329,26 @@
         <% include ./partials/foot %>
         <% include ./partials/up %>
         <script src="/js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(window).scroll(function () {
+                //if you hard code, then use console
+                //.log to determine when you want the
+                //nav bar to stick.
+                console.log($(window).scrollTop())
+                if ($(window).scrollTop() > 281) {
+                    $('#notification').addClass('front');
+                }
+                if ($(window).scrollTop() < 281) {
+                    $('#notification').removeClass('front');
+                }
+            });
+        });
+        $(document).on('click', '.notification > button.delete', function() {
+            $(this).parent().addClass('is-hidden');
+            return false;
+        });
+    </script>
     </body>
 </html>

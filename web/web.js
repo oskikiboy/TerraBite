@@ -95,6 +95,22 @@ module.exports = function (app, config, client, req) {
         renderErrorPage(req, res, err);
     }
 });
+
+    // Policy
+    app.get('/paperwork', (req, res) => {
+
+        try {
+
+            res.render('policy', {
+            title: 'TerraBite &bull; Paperwork'
+        })
+
+    } catch (err) {
+        console.error(`Unable to load policy page, Error: ${err.stack}`);
+        renderErrorPage(req, res, err);
+    }
+});
+
     app.get("/maintenance", (req, res) => {
         try {
             res.render('maintenance', {

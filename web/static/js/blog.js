@@ -75,7 +75,7 @@ function loadPosts() {
         let subtitleArea = document.createElement("h2");
         subtitleArea.setAttribute("class", "subtitle");
         subtitleArea.setAttribute("style", "color: #363636;");
-        subtitleArea.innerHTML = "By ${author_username}, published: <i>${post_date}</i>";
+        subtitleArea.innerHTML = `By ${author_username}, published: <i>${post_date}</i>`;
         contentBox.appendChild(subtitleArea);
 
         headerInfo.appendChild(contentBox);

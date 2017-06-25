@@ -2774,10 +2774,14 @@ input[type="submit"].button {
 }
 
 .notification:not(:last-child) {
-  margin-bottom: 1.5rem;
 }
 
-.notification a:not(.button) {
+.notification a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.notification a:hover:not(.button) {
   color: currentColor;
   text-decoration: underline;
 }
@@ -6544,7 +6548,7 @@ label.panel-block:hover {
 }
 
 .hero.is-dark .nav {
-  box-shadow: 0 1px 0 rgba(245, 245, 245, 0.2);
+  box-shadow:  0 1.39px 0 rgba(10, 10, 10, 0.4);
 }
 
 @media screen and (max-width: 768px) {
@@ -7160,5 +7164,6 @@ label.panel-block:hover {
 .footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem;
+  font-size: medium;
 }
 /*# sourceMappingURL=bulma.css.map */
