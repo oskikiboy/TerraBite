@@ -17,6 +17,7 @@
     "express-minify": "^0.2.0",
     "express-session": "^1.15.3",
     "figlet": "^1.2.0",
+    "fs-extra": "^3.0.1",
     "g-i-s": "^2.0.0",
     "maintenance": "0.0.2",
     "mathjs": "^3.13.3",
