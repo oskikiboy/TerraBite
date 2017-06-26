@@ -14,6 +14,12 @@ const fs = require('fs');
 const moment = require('moment');
 const express = require('express');
 const app = exports.app = express();
+const passport = require('passport');
+const session = require('express-session');
+const cookieSession = require('cookie-session');
+const minify = require('express-minify');
+const bodyParser = require('body-parser');
+const DiscordS = require('passport-discord').Strategy;
 const http = require('http');
 let connection;
 
@@ -39,16 +45,32 @@ if (config.maintenance) {
 }
 
 
-    const web = exports.web = require('./web/web');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('Web'));
+app.set('views', `${__dirname}/web/views`);
+app.set('view engine', 'ejs');
+app.use(minify());
+app.use('/', express.static(`${__dirname}/web/static`));
+app.use(cookieSession({
+    name: 'loginSession',
+    keys: [config.clientID, config.session_secret],
+    maxAge: 12 * 60 * 60 * 1000 // 48 hours
+}));
+
+
+    const web = exports.web = require('./web-modules/web');
+    const auth = exports.auth = require('./web-modules/auth');
 
 
     require('./utils/eventLoader.js')(client);
-    require('./web/web.js');
+    require('./web-modules/web.js');
+    require('./web-modules/auth.js');
 
     client.login(config.token);
 
     function updateStats() {
-        unirest.post(`https://discordbots.org/api/bots/${config.client_id}/stats`)
+        unirest.post(`https://discordbots.org/api/bots/${config.clientID}/stats`)
             .headers({
                 'Authorization': `${config.discordbotstoken}`
             })
@@ -119,7 +141,8 @@ if (config.maintenance) {
     };
 
     try {
-        web(app, config, client);
+        auth(config, app, passport, DiscordS, express);
+        web(app, config, client, express, passport, DiscordS,);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }

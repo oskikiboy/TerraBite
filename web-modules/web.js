@@ -1,17 +1,9 @@
 const requestify = require('requestify');
 const moment = require('moment');
-const express = require('express');
 const fs = require('fs');
 var path = require('path');
 
-module.exports = function (app, config, client, req) {
-
-    app.set('views', path.join(__dirname, 'views'));
-    app.set('view engine', 'ejs');
-
-    app.use(express.static(path.join(__dirname, 'static')));
-
-    var invitelink = config.botinvite;
+module.exports = function (app, config, client, req, express) {
 
     // Maintenance mode
     app.use(function (req, res, next) {
@@ -127,6 +119,8 @@ module.exports = function (app, config, client, req) {
         renderErrorPage(req, res, err);
     }
 });
+
+
 
     // Error
     app.get("/error", (req, res) => {
