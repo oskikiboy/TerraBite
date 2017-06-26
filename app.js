@@ -141,8 +141,8 @@ app.use(cookieSession({
     };
 
     try {
-        auth(config, app, passport, DiscordS, express);
-        web(app, config, client, express, passport, DiscordS,);
+        auth(config, app, passport, DiscordS);
+        web(app, config, client);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }
