@@ -3,7 +3,11 @@ const moment = require('moment');
 const fs = require('fs');
 var path = require('path');
 
-module.exports = function (app, config, client, req, express) {
+module.exports = function (app, config, client, req, express, bodyParser, minify, cookieSession) {
+
+    app.set('views', path.join(__dirname, 'views'));
+    app.set('view engine', 'ejs');
+    app.use(express.static(path.join(__dirname, 'static')))
 
     // Maintenance mode
     app.use(function (req, res, next) {

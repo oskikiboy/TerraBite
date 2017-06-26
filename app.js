@@ -45,18 +45,18 @@ if (config.maintenance) {
 }
 
 
-app.use(bodyParser.json());
+/*app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('Web'));
-app.set('views', `${__dirname}/web/views`);
+app.set('views', `${__dirname}/views`);
 app.set('view engine', 'ejs');
 app.use(minify());
-app.use('/', express.static(`${__dirname}/web/static`));
+app.use('/', express.static(`${__dirname}/static`));
 app.use(cookieSession({
     name: 'loginSession',
     keys: [config.clientID, config.session_secret],
     maxAge: 12 * 60 * 60 * 1000 // 48 hours
-}));
+}));*/
 
 
     const web = exports.web = require('./web/web');
@@ -141,8 +141,8 @@ app.use(cookieSession({
     };
 
     try {
-        auth(config, app, passport, DiscordS);
-        web(app, config, client);
+        //auth(config, app, passport, DiscordS, bodyParser, express, minify, cookieSession);
+        web(app, config, client, bodyParser, express);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }

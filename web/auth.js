@@ -1,4 +1,20 @@
-module.exports = function (config, app, passport, DiscordS) {
+/*const fs = require('fs');
+var path = require('path');
+
+module.exports = function (config, app, passport, DiscordS, bodyParser, express, minify, cookieSession) {
+
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(express.static('Web'));
+    app.set('views', `${__dirname}/views`);
+    app.set('view engine', 'ejs');
+    app.use(minify());
+    app.use('/', express.static(`${__dirname}/static`));
+    app.use(cookieSession({
+        name: 'loginSession',
+        keys: [config.clientID, config.session_secret],
+        maxAge: 12 * 60 * 60 * 1000 // 48 hours
+    }));
 
     const scopes = [
         'identify',
@@ -67,4 +83,5 @@ function checkAuth(req, res, next) {
     if (req.isAuthenticated()) return next();
     res.json('Sorry it appears you arnt logged in!');
 }
+*/
 
