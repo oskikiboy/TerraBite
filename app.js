@@ -59,13 +59,13 @@ app.use(cookieSession({
 }));
 
 
-    const web = exports.web = require('./web-modules/web');
-    const auth = exports.auth = require('./web-modules/auth');
+    const web = exports.web = require('./web/web');
+    const auth = exports.auth = require('./web/auth');
 
 
     require('./utils/eventLoader.js')(client);
-    require('./web-modules/web.js');
-    require('./web-modules/auth.js');
+    require('./web/web.js');
+    require('./web/auth.js');
 
     client.login(config.token);
 
