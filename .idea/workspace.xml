@@ -134,9 +134,12 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="144" column="34" lean-forward="true" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="60">
+              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+              <folding>
+                <marker date="1498606343000" expanded="true" signature="4203:4209" ph="{...}" />
+                <marker date="1498606343000" expanded="true" signature="4221:4340" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,8 +147,58 @@
       <file leaf-file-name="web.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/web.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state relative-caret-position="135">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disconnect.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events/disconnect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="join.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/join.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="memes.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/memes.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queue.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/queue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prefix.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/prefix.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,11 +217,9 @@
       <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="85" column="2" lean-forward="false" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="2" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="1050">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -288,6 +339,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TerraBite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TerraBite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -906,7 +971,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77453000" />
+    <option name="totallyTimeSpent" value="77782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -1015,8 +1080,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/queue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
+        <state relative-caret-position="429">
           <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,6 +1090,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,6 +1099,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,6 +1115,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,26 +1367,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="85" column="2" lean-forward="false" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="1050">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="144" column="34" lean-forward="true" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="60">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <marker date="1498606343000" expanded="true" signature="4203:4209" ph="{...}" />
+            <marker date="1498606343000" expanded="true" signature="4221:4340" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/web.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        <state relative-caret-position="135">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding />
         </state>
       </provider>
