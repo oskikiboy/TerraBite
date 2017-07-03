@@ -1,0 +1,109 @@
+.banner {
+    background: -webkit-linear-gradient(45deg, rgba(35, 50, 59, 1) 0%, rgba(95, 88, 128, 1) 100%);
+    background: linear-gradient(45deg, rgba(35, 50, 59, 1) 0%, rgba(95, 88, 128, 1) 100%);
+}
+
+/*CSS by Inventor02*/
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background: #3273dc;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 21px;
+    color: #ECF0F1;
+}
+
+#container {
+    left: 50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -444px;
+    min-width: 900px;
+    min-height: 330px;
+}
+
+#logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 6px;
+    background: #ecf0f1;
+}
+
+#logo > img {
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    position: fixed;
+    z-index: 5000000;
+    width: 100%;
+}
+
+#dark {
+    color: #363636;
+}
+
+
+/*Totally not ripped of Aurora*/
+
+.someone {
+    transition: all 0.25s;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: 5px solid #64016b;
+    display: inline-block;
+    max-width: 75%;
+    width: 96px;
+    height: 96px;
+}
+
+.someone:hover {
+    transform: /*scale(1.5)*/
+            rotate(360deg);
+}
+
+.founder {
+    border: 5px solid #5400e9;
+}
+
+.lead {
+    border: 5px solid #E41E4A;
+}
+
+.ldev {
+    border: 5px solid #914A83;
+}
+
+#lead {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.dev {
+    border: 5px solid #3490BF;
+}
+
+.gfx{
+    border: 5px solid #00d1b2;
+}
+
+.py {
+    border: 5px solid #00FF00;
+}
+
+

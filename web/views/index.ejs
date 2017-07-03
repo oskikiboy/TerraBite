@@ -22,17 +22,17 @@
 
         <link rel="stylesheet" href="/discord/icon-discord.css">
         <link rel="stylesheet" href="/css/bulma.css">
-        <link rel="stylesheet" href="/css/custom.css">
+        <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?cp0z2c">
         <link rel="icon" href="/img/icon.png">
 
         <script src="https://use.fontawesome.com/85986a92d7.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="/js/particles.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
         <script src="/js/bulma.js"></script>
     </head>
     <style type="text/css">
-
         #particles-js {
             width: 100%;
             height: 0px;
@@ -45,66 +45,14 @@
             top: 0;
             left: 0;
         }
-
-        .banner {
-            background: -webkit-linear-gradient(45deg, rgba(35, 50, 59, 1) 0%, rgba(95, 88, 128, 1) 100%);
-            background: linear-gradient(45deg, rgba(35, 50, 59, 1) 0%, rgba(95, 88, 128, 1) 100%);
-        }
-
-        /*CSS by Inventor02*/
-
-        @import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            font-family: "Ubuntu", sans-serif;
-            font-size: 21px;
-            color: #ECF0F1;
-        }
-
-        #container {
-            left: 50%;
-            top: 50%;
-            margin-top: -80px;
-            margin-left: -444px;
-            min-width: 900px;
-            min-height: 330px;
-        }
-
-        #logo {
-            height: 150px;
-            width: 150px;
-            border-radius: 6px;
-            background: #ecf0f1;
-        }
-
-        #logo > img {
-            border-radius: 6px;
-            width: 100%;
-            height: 100%;
-        }
-
-        .front {
-            position: fixed;
-            z-index: 5000000;
-            width: 100%;
-        }
     </style>
     <body>
-    <div class="notification is-danger" style="border-radius: 0px;" id="notification">
-        <button class="delete"></button>
-        <div class="has-text-centered">
-            Help us out with oauth2! Join the <a href="<%= support %>" class="ded">server</a> and the <a href="#team">development</a> team to help out!
+        <div class="notification is-danger" style="border-radius: 0px;" id="notification">
+            <button class="delete"></button>
+            <div class="has-text-centered">
+                Help us out with oauth2! Join the <a href="<%= support %>" class="ded">server</a> and the <a href="#team">development</a> team to help out!
+            </div>
         </div>
-    </div>
         <div id="particles-js" class="is-hidden-mobile">
         </div>
         <section class="hero is-dark is-fullheight banner" style="z-index: -5;">
@@ -188,9 +136,10 @@
                 </div>
             </div>
         </section>
+        <!-- Credit to Aurora -->
         <section class="hero is-black" id="team">
             <br>
-            <div class="container has-text-centered box">
+            <div class="container has-text-centered box" id="dark">
                 <div class="heading">
                     <h1 class="title" style="color:#363636;">Development team</h1>
                     <div style="padding: -40px">
@@ -199,224 +148,73 @@
                     <h2 class="subtitle" style="color:#363636;"><i>Those who have created the bot</i></h2>
                 </div>
                 <br><br>
+                <div class="columns" id="lead">
+                    <div class="column">
+                        <a href="https://oskikiboy.me" target="_blank" rel="noopener noreferrer"><img src="https://oskikiboy.me/img/icon.png" class="someone founder"></a>
+                        <h3>oskikiboy</h3>
+                        <span class="tag is-danger" style="background-color: #5400e9">Project Lead &amp; Founder</span>
+                    </div>
+                    <div class="column">
+                        <a href="https://sideofchips.co.uk" target="_blank" rel="noopener noreferrer"><img src="https://cdn.discordapp.com/avatars/210683612369125386/3539947c07374b11e8d9035d7e80bba0.png?size=2048" class="someone lead"></a>
+                        <h3>Haxmat</h3>
+                        <span class="tag is-danger">Project Lead</span>
+                    </div>
+
+                    <div class="column">
+                        <img src="https://cdn.discordapp.com/avatars/229232856063410176/05ed767353dc5e24d79666ad1220e1f6.webp?size=2048" class="someone ldev">
+                        <h3>motasim</h3>
+                        <span class="tag is-danger">Lead Developer</span>
+                    </div>
+
+                    <div class="column">
+                        <a href="http://adampro.cu.cc" target="_blank" rel="noopener noreferrer"><img src="http://adampro.cu.cc/img/icon.png" class="someone ldev"></a>
+                        <h3>Cringy Adam</h3>
+                        <span class="tag is-danger">Lead developer</span>
+                    </div>
+                </div>
+                <div class="columns has-text-centered">
+                    <div class="column is-4"></div>
+                    <div class="column is-2">
+                        <a href="https://blackberrypi.jimdo.com" target="_blank" rel="noopener noreferrer"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=176x10000:format=png/path/s9f28a009b51a07b8/image/ide51b81d11f5ca70/version/1496651998/image.png" class="someone py"></a>
+                        <h3>Raspberry Pi</h3>
+                        <span class="tag is-success">TerraBite.py lead</span>
+                    </div>
+                    <div class="column is-2">
+                        <img src="https://cdn.discordapp.com/avatars/301668270648328192/ed9eb124553e2fccf7058f96edf621e1.jpg?size=1024" class="someone gfx">
+                        <h3>Tate</h3>
+                        <span class="tag is-primary">GFX Designer</span>
+                    </div>
+                </div>
                 <div class="columns">
                     <div class="column">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img src="https://oskikiboy.me/img/icon.png" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>oskikiboy</strong>
-                                            <small>@oskikiboy#5467</small>
-                                            <span class="tag is-primary is-small">Project Founder</span>
-                                            <span class="tag is-success is-small">Front end Developer</span>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                                        src="https://cdn.discordapp.com/avatars/210683612369125386/3539947c07374b11e8d9035d7e80bba0.png?size=2048" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>haxmat</strong>
-                                            <small>@haxmat#2439</small>
-                                            <span class="tag is-primary is-small">Project Head</span>
-                                            <span class="tag is-success is-small">Front end Developer</span>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                                        src="https://cdn.discordapp.com/avatars/229232856063410176/05ed767353dc5e24d79666ad1220e1f6.webp?size=2048" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>motasim</strong>
-                                            <small>@motasim#4036</small>
-                                            <span class="tag is-dark is-small">Project Lead</span>
-                                            <span class="tag is-success is-small">Front end Developer</span>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                                        src="https://cdn.discordapp.com/avatars/239738897985175552/8e28a509823eb5f5978ffb87fab728fa.png?size=2048" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Cringy Adam</strong>
-                                            <small>@Cringy Adam#4611</small>
-                                            <span class="tag is-dark is-small">Project Lead</span>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                src="https://cdn.discordapp.com/avatars/321193377951645699/610f7037f28820e75694cb621ff1927e.png?size=2048" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Blackberry pi</strong>
-                                            <small>@Blackberry pi#6618</small>
-                                            <span class="tag is-dark is-small">Project Lead</span>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                                        src="https://cdn.discordapp.com/avatars/236002091120721930/a_a5bb1694dcb429c3678b3766de5fe545.gif?size=2048" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Codefox</strong>
-                                            <small>@Codefox#0953</small>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                src="https://cdn.discordapp.com/avatars/178409772436029440/a_0fbc1a8e9ee2427c407940ac01548ee2.gif?size=2048" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Acorn</strong>
-                                            <small>@Acorn#4444</small>
-                                            <span class="tag is-success is-small">Front end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                src="https://cdn.discordapp.com/avatars/150707175214415872/a4b53a93b1685b6a021b7a44cc95b4e3.webp?size=1024" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Brandon14</strong>
-                                            <small>@Brandon14#0131</small>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                src="https://cdn.discordapp.com/avatars/209395113485402123/b6f7cae6ee6a820b6ececda49a21e9b1.webp?size=1024" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Jayden</strong>
-                                            <small>@Jayden#5395</small>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                src="https://cdn.discordapp.com/avatars/258971374511587329/c14dd1b3810a0de7cf5cd55e3382b70d.webp?size=1024" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Hurricane</strong>
-                                            <small>@Hurricane#6955</small>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image is-64x64"><img
-                                                src="https://cdn.discordapp.com/avatars/260744645884116993/d4eb3ece2848f97ddfdeafec75ea22fa.webp?size=1024" style="border-radius: 100%;">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Fardin || Developer</strong>
-                                            <small>@Fardin || Developer#9589</small>
-                                            <span class="tag is-success is-small">Back end Developer</span>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                        <a href="http://codefox.ga" target="_blank" rel="noopener noreferrer"><img src="https://cdn.discordapp.com/avatars/236002091120721930/78726411e07da210a51c3ae1c759bcb1.jpg?size=1024" class="someone dev"></a>
+                        <h3>Codefox</h3>
+                        <span class="tag is-info">Developer</span>
+                    </div>
+                    <div class="column">
+                        <img src="https://cdn.discordapp.com/avatars/178409772436029440/a_0fbc1a8e9ee2427c407940ac01548ee2.gif?size=2048" class="someone dev">
+                        <h3>Acorn</h3>
+                        <span class="tag is-info">Developer</span>
+                    </div>
+                    <div class="column">
+                        <img src="https://cdn.discordapp.com/avatars/150707175214415872/a4b53a93b1685b6a021b7a44cc95b4e3.webp?size=1024" class="someone dev">
+                        <h3>Brandon14</h3>
+                        <span class="tag is-info">Developer</span>
+                    </div>
+                    <div class="column">
+                        <img src="https://cdn.discordapp.com/avatars/209395113485402123/b6f7cae6ee6a820b6ececda49a21e9b1.webp?size=1024" class="someone dev">
+                        <h3>Jayden</h3>
+                        <span class="tag is-info">Developer</span>
+                    </div>
+                    <div class="column">
+                        <img src="https://cdn.discordapp.com/avatars/258971374511587329/c14dd1b3810a0de7cf5cd55e3382b70d.webp?size=1024" class="someone dev">
+                        <h3>Hurricane</h3>
+                        <span class="tag is-info">Developer</span>
+                    </div>
+                    <div class="column">
+                        <img src="https://cdn.discordapp.com/avatars/260744645884116993/d4eb3ece2848f97ddfdeafec75ea22fa.webp?size=1024" class="someone dev">
+                        <h3>Fardin</h3>
+                        <span class="tag is-info">Developer</span>
                     </div>
                 </div>
             </div>
@@ -425,26 +223,26 @@
         <% include ./partials/foot %>
         <% include ./partials/up %>
         <script src="/js/app.js"></script>
-    <script>
-        $(document).ready(function() {
+        <script>
+            $(document).ready(function() {
 
-            $(window).scroll(function () {
-                //if you hard code, then use console
-                //.log to determine when you want the
-                //nav bar to stick.
-                console.log($(window).scrollTop())
-                if ($(window).scrollTop() > 281) {
-                    $('#notification').addClass('front');
-                }
-                if ($(window).scrollTop() < 281) {
-                    $('#notification').removeClass('front');
-                }
+                $(window).scroll(function () {
+                    //if you hard code, then use console
+                    //.log to determine when you want the
+                    //nav bar to stick.
+                    console.log($(window).scrollTop())
+                    if ($(window).scrollTop() > 281) {
+                        $('#notification').addClass('front');
+                    }
+                    if ($(window).scrollTop() < 281) {
+                        $('#notification').removeClass('front');
+                    }
+                });
             });
-        });
-        $(document).on('click', '.notification > button.delete', function() {
-            $(this).parent().addClass('is-hidden');
-            return false;
-        });
-    </script>
+            $(document).on('click', '.notification > button.delete', function() {
+                $(this).parent().addClass('is-hidden');
+                return false;
+            });
+        </script>
     </body>
 </html>
