@@ -82,9 +82,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/views/partials/username.ejs" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/views/policy.ejs" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/views/wip.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/auth.js" afterPath="$PROJECT_DIR$/web/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web.js" afterPath="$PROJECT_DIR$/web/web.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -893,12 +890,12 @@
       <workItem from="1498022123546" duration="10547000" />
       <workItem from="1498365488934" duration="15790000" />
       <workItem from="1498445088261" duration="3287000" />
-      <workItem from="1499070662188" duration="18523000" />
+      <workItem from="1499070662188" duration="18585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99729000" />
+    <option name="totallyTimeSpent" value="99791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
