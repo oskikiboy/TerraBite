@@ -11,11 +11,9 @@ const getAuthUser = user => {
     };
 };
 
-module.exports = function (app, config, client, req, bodyParser, minify, cookieSession) {
+module.exports = function (app, config, client, req,) {
 
-    app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
-    app.use(express.static(path.join(__dirname, 'static')))
 
 
     // Maintenance mode

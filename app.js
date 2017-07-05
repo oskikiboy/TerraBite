@@ -48,7 +48,11 @@ if (config.maintenance) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('Web'));
+app.set('views', `${__dirname}/views`);
+app.set('view engine', 'ejs');
 app.use(minify());
+app.use('/', express.static(`${__dirname}/static`));
 app.use(cookieSession({
     name: 'loginSession',
     keys: [config.clientID, config.session_secret],
