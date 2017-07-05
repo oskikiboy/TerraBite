@@ -48,9 +48,6 @@ if (config.maintenance) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.set('views', path.join(__dirname, '/web/views'));
-app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '/web/static')))
 app.use(minify());
 app.use(cookieSession({
     name: 'loginSession',
