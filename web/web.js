@@ -1,13 +1,16 @@
 const requestify = require('requestify');
 const moment = require('moment');
 const fs = require('fs');
-var path = require('path');
+const getAuthUser = user => {
+    return {
+        username: user.username,
+        id: user.id,
+        avatar: user.avatar ? (`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.jpg`) : "/static/img/discord-icon.png"
+    };
+};
 
 module.exports = function (app, config, client, req, express, bodyParser, minify, cookieSession) {
 
-    app.set('views', path.join(__dirname, 'views'));
-    app.set('view engine', 'ejs');
-    app.use(express.static(path.join(__dirname, 'static')))
 
     // Maintenance mode
     app.use(function (req, res, next) {
@@ -40,6 +43,9 @@ module.exports = function (app, config, client, req, express, bodyParser, minify
 
     let uptime = process.uptime();
     res.render('index', {
+        authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+        loggedInStatus: req.isAuthenticated(),
+        userRequest: req.user || false,
         botuptime: format(uptime),
         guildamount: client.guilds.size,
         useramount: client.users.size,
@@ -57,6 +63,8 @@ module.exports = function (app, config, client, req, express, bodyParser, minify
         try {
 
             res.render('blog', {
+                loggedInStatus: req.isAuthenticated(),
+                userRequest: req.user || false,
                 title: 'Terrabite &bull; Blog',
                 support: config.support,
         })
@@ -67,19 +75,14 @@ module.exports = function (app, config, client, req, express, bodyParser, minify
     }
 });
 
-    app.get('/add', (req, res, config) => {
-
+    app.get('/add', (req, res) => {
         try {
-            //borked
-            res.redirect(
-                'https://discordapp.com/oauth2/authorize?client_id=321909965201604611&scope=bot&permissions=2146958463'
-        );
+            res.redirect(config.invitelink);
 
-        } catch (err) {
-            console.error(`Unable to load add page, Error: ${err.stack}`);
-            renderErrorPage(req, res, err);
+} catch (err) {
+        console.error(`An error occurred trying to redirect to the bot page, Error: ${err.stack}`);
+        renderErrorPage(req, res, err);
     }
-
 });
     // Work in progress
     app.get('/wip', (req, res) => {

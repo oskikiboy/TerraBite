@@ -47,7 +47,7 @@
         }
     </style>
     <body>
-        <div class="notification is-danger" style="border-radius: 0px;" id="notification">
+        <div class="notification is-danger is-hidden" style="border-radius: 0px;" id="notification">
             <button class="delete"></button>
             <div class="has-text-centered">
                 Help us out with oauth2! Join the <a href="<%= support %>" class="ded">server</a> and the <a href="#team">development</a> team to help out!
@@ -65,14 +65,46 @@
                         <img id="logo" src="/img/icon.png">
                         <div class="column is-9">
                             <h1 class="title is-1" style="color:#fff;">&bull; Terrabite</h1>
-                            <h2 style="margin-top: -1.2rem;"><strong>TerraBite</strong> is a WIP Discord bot.</h2>
+                            <h2 style="margin-top: -1.2rem;">
+                                <% if (!loggedInStatus) { %>
+                                <strong>TerraBite</strong> is a WIP Discord bot.
+                                <% } else { %>
+                                Welcome to the <strong>TerraBite</strong> Dashboard ~ WIP.
+                                <% } %>
+                            </h2>
                         </div>
                     </div>
                 </div>
                 <div class="container is-hidden-tablet has-text-centered">
                     <h1 class="title is-1">TerraBite</h1>
-                    <h2 class="subtitle is-4"><strong>TerraBite</strong> is a WIP Discord bot.</h2>
+                    <h2 class="subtitle is-4">
+                        <% if (!loggedInStatus) { %>
+                        <strong>TerraBite</strong> is a WIP Discord bot.
+                        <% } else { %>
+                        Welcome to the <strong>TerraBite</strong> Dashboard ~ WIP.
+                        <% } %>
+                    </h2>
                 </div>
+            </div>
+            <div class="hero-foot">
+                <div class="container has-text-centered">
+                    <% if (!loggedInStatus) { %>
+                    <a class="button is-white is-medium is-outlined" href="/login" style="margin-left: 0px;">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-in"></i>
+                        </span>
+                        <span>Login</span>
+                    </a>
+                    <% } else { %>
+                    <a class="button is-white is-medium is-outlined" href="/logout" style="margin-left: 0px;">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-out"></i>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                    <% } %>
+                </div>
+                <br>
             </div>
         </section>
         <section class="hero is-dark is-bold">

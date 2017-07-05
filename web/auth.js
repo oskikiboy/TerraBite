@@ -1,20 +1,4 @@
-/*const fs = require('fs');
-var path = require('path');
-
-module.exports = function (config, app, passport, DiscordS, bodyParser, express, minify, cookieSession) {
-
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({extended: true}));
-    app.use(express.static('Web'));
-    app.set('views', `${__dirname}/views`);
-    app.set('view engine', 'ejs');
-    app.use(minify());
-    app.use('/', express.static(`${__dirname}/static`));
-    app.use(cookieSession({
-        name: 'loginSession',
-        keys: [config.clientID, config.session_secret],
-        maxAge: 12 * 60 * 60 * 1000 // 48 hours
-    }));
+module.exports = function (config, app, passport, DiscordS) {
 
     const scopes = [
         'identify',
@@ -44,30 +28,11 @@ module.exports = function (config, app, passport, DiscordS, bodyParser, express,
     app.use(passport.initialize());
     app.use(passport.session());
 
-    app.get("/login", (req, res, next) => {
-        if (req.query.redirection) req.session.redirect = req.query.redirection;
-    passport.authenticate("discord", {scope: scopes, callbackURL: `${config.host}/login/callback`})(req, res, next);
-});
+    app.get('/login', passport.authenticate('discord', { scope: scopes }), function(req, res) {});
+    app.get('/login/callback',
+        passport.authenticate('discord', { failureRedirect: '/error' }), (req, res) => { { res.redirect('/') } console.log(`- ${req.user.username} has logged on.`); } // auth success
+    );
 
-    app.get("/login/callback", passport.authenticate("discord", {failureRedirect: '/error'}), (req, res) => {
-        console.log(`- ${req.user.username} has logged on.`);
-    if (req.session.redirect === undefined) {
-        res.render('error', {
-            discord_server: config.discord_server_name,
-            config: config,
-            loggedInStatus: req.isAuthenticated(),
-            userRequest: req.user,
-            error_code: "801",
-            error_text: `A redirection error has occurred; your session did not store a required redirection URL, and your oauth request could not fully be completed. You are logged in, please <a href='/'>return to the home page.</a>`
-        });
-        return;
-    }
-    if (req.session.redirect === `/favicon-32x32.png`) {
-        res.redirect("/");
-        return;
-    }
-    res.redirect(req.session.redirect);
-});
 
     app.get("/info", checkAuth, (req, res) => {
         res.json(req.user);
@@ -81,7 +46,8 @@ module.exports = function (config, app, passport, DiscordS, bodyParser, express,
 
 function checkAuth(req, res, next) {
     if (req.isAuthenticated()) return next();
-    res.json('Sorry it appears you arnt logged in!');
+    res.json('Sorry it appears you aren\'t logged in!');
 }
-*/
+
+
 

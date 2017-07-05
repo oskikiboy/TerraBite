@@ -1,0 +1,22 @@
+<a id="usernameContainer" class="nav-item is-active is-tab">
+    <img id="imgProfilePic" class="image is-16x16" style="border-radius: 100%">&nbsp;
+    <span id="spanUsername"></span>
+</a>
+
+<script>
+    var request = <%- JSON.stringify(userRequest) %>
+    var usernameContainer = document.getElementById('usernameContainer');
+    if (!request) usernameContainer.setAttribute('style', 'display: none');
+    var username = request.username;
+    var id = request.id;
+    var avatarId = request.avatar;
+    var avatar = getProfileAvatar(id, avatarId);
+    let profilePic = document.getElementById('imgProfilePic');
+    profilePic.setAttribute('src', avatar);
+    let usernameSpace = document.getElementById('spanUsername');
+    usernameSpace.appendChild(document.createTextNode(username));
+    usernameContainer.setAttribute('title', `Currently logged in as ${username}`)
+    function getProfileAvatar(id, avatarId) {
+        return "https://images.discordapp.net/avatars/" + id + "/" + avatarId + ".jpg";
+    }
+</script>

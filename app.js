@@ -5,6 +5,7 @@ const sql = require('sqlite');
 const Discord = require('discord.js');
 const unirest = require('unirest');
 const os = require('os');
+var path = require('path');
 const client = new Discord.Client({
   autoreconnect: true
 });
@@ -45,18 +46,17 @@ if (config.maintenance) {
 }
 
 
-/*app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('Web'));
-app.set('views', `${__dirname}/views`);
+app.set('views', path.join(__dirname, 'web/views'));
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'web/static')))
 app.use(minify());
-app.use('/', express.static(`${__dirname}/static`));
 app.use(cookieSession({
     name: 'loginSession',
     keys: [config.clientID, config.session_secret],
     maxAge: 12 * 60 * 60 * 1000 // 48 hours
-}));*/
+}));
 
 
     const web = exports.web = require('./web/web');
@@ -141,8 +141,8 @@ app.use(cookieSession({
     };
 
     try {
-        //auth(config, app, passport, DiscordS, bodyParser, express, minify, cookieSession);
-        web(app, config, client, bodyParser, express);
+        auth(config, app, passport, DiscordS);
+        web(app, config, client);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }
