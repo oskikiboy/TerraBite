@@ -47,12 +47,6 @@
         }
     </style>
     <body>
-        <div class="notification is-danger is-hidden" style="border-radius: 0px;" id="notification">
-            <button class="delete"></button>
-            <div class="has-text-centered">
-                Help us out with oauth2! Join the <a href="<%= support %>" class="ded">server</a> and the <a href="#team">development</a> team to help out!
-            </div>
-        </div>
         <div id="particles-js" class="is-hidden-mobile">
         </div>
         <section class="hero is-dark is-fullheight banner" style="z-index: -5;">
@@ -72,6 +66,21 @@
                                 Welcome to the <strong>TerraBite</strong> Dashboard ~ WIP.
                                 <% } %>
                             </h2>
+                            <% if (!loggedInStatus) { %>
+                    <a class="button is-white is-medium is-outlined" style="position: absolute" href="/login">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-in"></i>
+                        </span>
+                        <span>Login</span>
+                    </a>
+                            <% } else { %>
+                    <a class="button is-white is-medium is-outlined" href="/logout">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-out"></i>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                            <% } %>
                         </div>
                     </div>
                 </div>
@@ -84,19 +93,15 @@
                         Welcome to the <strong>TerraBite</strong> Dashboard ~ WIP.
                         <% } %>
                     </h2>
-                </div>
-            </div>
-            <div class="hero-foot">
-                <div class="container has-text-centered">
                     <% if (!loggedInStatus) { %>
-                    <a class="button is-white is-medium is-outlined" href="/login" style="margin-left: 0px;">
+                    <a class="button is-white is-medium is-outlined" style="position: absolute" href="/login">
                         <span class="icon is-medium">
                             <i class="fa fa-sign-in"></i>
                         </span>
                         <span>Login</span>
                     </a>
                     <% } else { %>
-                    <a class="button is-white is-medium is-outlined" href="/logout" style="margin-left: 0px;">
+                    <a class="button is-white is-medium is-outlined" href="/logout">
                         <span class="icon is-medium">
                             <i class="fa fa-sign-out"></i>
                         </span>
@@ -104,7 +109,10 @@
                     </a>
                     <% } %>
                 </div>
-                <br>
+            </div>
+            <div class="hero-foot">
+                <div class="container has-text-centered">
+                </div>
             </div>
         </section>
         <section class="hero is-dark is-bold">
@@ -255,7 +263,7 @@
         <% include ./partials/foot %>
         <% include ./partials/up %>
         <script src="/js/app.js"></script>
-        <script>
+        <!-- <script>
             $(document).ready(function() {
 
                 $(window).scroll(function () {
@@ -276,5 +284,6 @@
                 return false;
             });
         </script>
+        -->
     </body>
 </html>
