@@ -17,9 +17,6 @@ const express = require('express');
 const app = exports.app = express();
 const passport = require('passport');
 const session = require('express-session');
-const cookieSession = require('cookie-session');
-const minify = require('express-minify');
-const bodyParser = require('body-parser');
 const DiscordS = require('passport-discord').Strategy;
 const http = require('http');
 let connection;
@@ -46,18 +43,7 @@ if (config.maintenance) {
 }
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('Web'));
-app.set('views', `${__dirname}/views`);
-app.set('view engine', 'ejs');
-app.use(minify());
-app.use('/', express.static(`${__dirname}/static`));
-app.use(cookieSession({
-    name: 'loginSession',
-    keys: [config.clientID, config.session_secret],
-    maxAge: 12 * 60 * 60 * 1000 // 48 hours
-}));
+
 
 
     const web = exports.web = require('./web/web');
