@@ -1,6 +1,8 @@
 const requestify = require('requestify');
 const moment = require('moment');
 const fs = require('fs');
+const express = require('express')
+var path = require('path');
 const getAuthUser = user => {
     return {
         username: user.username,
@@ -10,6 +12,9 @@ const getAuthUser = user => {
 };
 
 module.exports = function (app, config, client, req, express, bodyParser, minify, cookieSession) {
+
+    app.set('view engine', 'ejs');
+    app.set('views', path.join(__dirname, 'views'));
 
 
     // Maintenance mode

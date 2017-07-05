@@ -48,9 +48,9 @@ if (config.maintenance) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.set('views', path.join(__dirname, 'web/views'));
+app.set('views', path.join(__dirname, '/web/views'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'web/static')))
+app.use(express.static(path.join(__dirname, '/web/static')))
 app.use(minify());
 app.use(cookieSession({
     name: 'loginSession',
@@ -142,7 +142,7 @@ app.use(cookieSession({
 
     try {
         auth(config, app, passport, DiscordS);
-        web(app, config, client);
+        web(app, config, client, express);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }
