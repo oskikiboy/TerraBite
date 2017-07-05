@@ -2,78 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44a971b-9873-4a56-9789-6b31c313a04c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/css/bulma.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/css/bulma.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/data/blog_posts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/HELP-US-OUT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/preview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/screen-reader.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/readme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/style.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/img/TerrabiteLogoInvert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/img/TerrabiteTextLogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/img/icon-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/img/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/blog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/bulma.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/miny-part/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/miny-part/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/particles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/js/particles.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web.js" afterPath="$PROJECT_DIR$/web/web.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,10 +14,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="379">
               <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
               <folding />
             </state>
@@ -116,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/web.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="159">
+              <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -206,8 +134,8 @@
         <option value="$PROJECT_DIR$/web/auth.js" />
         <option value="$PROJECT_DIR$/web/views/partials/nav.ejs" />
         <option value="$PROJECT_DIR$/web/views/index.ejs" />
-        <option value="$PROJECT_DIR$/web/web.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/web/web.js" />
       </list>
     </option>
   </component>
@@ -883,12 +811,12 @@
       <workItem from="1498022123546" duration="10547000" />
       <workItem from="1498365488934" duration="15790000" />
       <workItem from="1498445088261" duration="3287000" />
-      <workItem from="1499070662188" duration="17648000" />
+      <workItem from="1499070662188" duration="17782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98854000" />
+    <option name="totallyTimeSpent" value="98988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -1297,18 +1225,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        <state relative-caret-position="379">
+          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/web/web.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="54" column="52" lean-forward="false" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+        <state relative-caret-position="159">
+          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
           <folding />
         </state>
       </provider>

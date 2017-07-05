@@ -11,7 +11,7 @@ const getAuthUser = user => {
     };
 };
 
-module.exports = function (app, config, client, req,) {
+module.exports = function (app, config, client, req) {
 
     app.set('view engine', 'ejs');
 
