@@ -70,6 +70,7 @@ module.exports = function (app, config, client, req) {
         try {
 
             res.render('blog', {
+                authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
                 loggedInStatus: req.isAuthenticated(),
                 userRequest: req.user || false,
                 title: 'Terrabite &bull; Blog',
@@ -130,6 +131,23 @@ module.exports = function (app, config, client, req) {
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
+        renderErrorPage(req, res, err);
+    }
+});
+
+    app.get('/dashboard', (req, res) => {
+
+        try {
+            res.render('dashboard', {
+            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
+            title: 'Terrabite &bull; Blog',
+            support: config.support,
+        })
+
+    } catch (err) {
+        console.error(`Unable to load blog page, Error: ${err.stack}`);
         renderErrorPage(req, res, err);
     }
 });

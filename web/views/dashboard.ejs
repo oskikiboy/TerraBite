@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TerraBite &bull; Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="oskikiboy">
+    <meta name="description" content="Dashboard">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TerraBite">
+    <meta property="og:image" content="assets/img/icon.png">
+    <meta property="og:description" content="Dashboard">
+
+    <meta name="twitter:title" content="TerraBite">
+    <meta name="twitter:image" content="/img/icon.png">
+    <meta name="twitter:description" content="Dashboard">
+
+    <link rel="shortcut icon" type="image/png" href="/img/icon.png">
+    <meta name="theme-color" content="#551A8B">
+
+    <link rel="stylesheet" href="/discord/icon-discord.css">
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?cp0z2c">
+    <link rel="icon" href="/img/icon.png">
+
+    <script src="https://use.fontawesome.com/85986a92d7.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/miny-part/particles.js"></script>
+    <script src="/js/bulma.js"></script>
+    <script src="/js/blog.js"></script>
+</head>
+<style type="text/css">
+
+    #particles-js {
+        width: 100%;
+        height: 0px;
+        background-color: #1D1D1D;
+        background-image: url('');
+        background-repeat: no-repeat;
+    }
+    .particles-js-canvas-el {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+    }
+
+    .banner {
+        background: -webkit-linear-gradient(45deg, rgba(35,50,59,1) 0%, rgba(95,88,128,1) 100%);
+        background: linear-gradient(45deg, rgba(35,50,59,1) 0%, rgba(95,88,128,1) 100%);
+    }
+
+    /*CSS by Inventor02*/
+
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 21px;
+        color: #ECF0F1;
+    }
+
+    #container {
+        left: 50%;
+        top: 50%;
+        margin-top: -225px;
+        margin-left: -444px;
+        min-width: 900px;
+        min-height: 330px;
+    }
+
+
+    #logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 4px;
+        background: #ecf0f1;
+    }
+
+    #logo > img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .front {
+        z-index: 5000000;
+    }
+    .terrasize {
+        height: 500px;
+    }
+</style>
+<body>
+<div id="particles-js" class="is-hidden-mobile">
+</div>
+<section class="hero is-dark is-medium banner terrasize" style="z-index: -5;">
+    <div class="hero-head">
+        <% include ./partials/nav %>
+    </div>
+    <div class="hero-body">
+        <div class="container is-hidden-mobile">
+            <div class="columns">
+                <img id="logo" src="/img/icon.png">
+                <div class="column is-9">
+                    <h1 class="title is-1" style="color:#fff;">&bull; TerraBite</h1>
+                    <h2 style="margin-top: -1.2rem;">Administration Panel</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container has-text-centered is-hidden-tablet">
+            <h1 class="title is-1">TerraBite</h1>
+            <h2 class="subtitle is-4">Administration Panel</h2>
+        </div>
+    </div>
+</section>
+<section id="header" class="hero is-danger is-medium is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1">
+                <strong>Welcome to the TerraBite Dashboard</strong>, but unfortunately it seems that this is a WIP. <h1><span class="tag is-danger is-medium">Work In Progress</span></h1><br><br/>
+            </h1>
+        </div>
+    </div>
+    <div class="hero-foot">
+        <div class="container has-text-centered">
+           <h2 class="title is-4">Come back Later</h2>
+        </div>
+        <br>
+    </div>
+</section>
+<% include ./partials/foot %>
+<% include ./partials/up %>
+<script src="/js/miny-part/app.js"></script>
+</body>
+</html>

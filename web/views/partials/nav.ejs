@@ -34,7 +34,7 @@
                 Blog
             </a>
             <% if(authUser) { %>
-            <a id="nav-dashboard" class="nav-item is-tab is-active" href="/wip" title="Go to dashboard">
+            <a id="nav-dashboard" class="nav-item is-tab is-active" href="/dashboard" title="Go to dashboard">
                 <img class="image is-16x16" src="<%= authUser.avatar %>" style="border-radius: 100%;" alt="<%= authUser.id %>">
                 &nbsp;
                 <span><%= authUser.username %></span>
