@@ -2,6 +2,7 @@ const requestify = require('requestify');
 const moment = require('moment');
 const fs = require('fs');
 const express = require('express')
+const config = require("../config.json")
 var path = require('path');
 const getAuthUser = user => {
     return {
@@ -135,20 +136,53 @@ module.exports = function (app, config, client, req) {
     }
 });
 
-    app.get('/dashboard', (req, res) => {
+    app.get('/dashboard', checkAuth, (req, res) => {
 
         try {
             res.render('dashboard', {
             authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
-            title: 'Terrabite &bull; Blog',
-            support: config.support,
+            title: 'Terrabite &bull; Dashboard',
+            support: config.support
         })
 
     } catch (err) {
-        console.error(`Unable to load blog page, Error: ${err.stack}`);
+        console.error(`Unable to load dashboard, Error: ${err.stack}`);
         renderErrorPage(req, res, err);
+    }
+});
+
+    app.get('/global-options', checkAuth, (req, res) => {
+        if (config.developers.indexOf(req.user.id) > -1 || config.owners.indexOf(req.user.id) > -1) {
+
+        try {
+
+            let superMaintainer = config.developers.indexOf(req.user.id) > -1 || config.owners.indexOf(req.user.id) > -1;
+
+            res.render('global', {
+                authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+                loggedInStatus: req.isAuthenticated(),
+                userRequest: req.user || false,
+                title: 'Terrabite &bull; DashBoard',
+                superMaintainer: superMaintainer,
+                support: config.support
+            });
+
+        } catch (err) {
+            console.error(`Unable to load maintainer page, Error: ${err.stack}`);
+            renderErrorPage(req, res, err);
+        }
+    }
+    else {
+        req.session.redirect = req.path;
+        res.status(403);
+        res.render('badLogin', {
+            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
+            support: config.support
+        });
     }
 });
 
@@ -196,5 +230,24 @@ function renderErrorPage(req, res, err, errorText) {
             error_code: 500,
             error_text: errorText
         })
+    }
+}
+
+function checkAuth(req, res, next) {
+    try {
+
+        if (req.isAuthenticated()) return next();
+
+        req.session.redirect = req.path;
+        res.status(403);
+        res.render('badLogin', {
+            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
+            support: config.support
+        });
+    } catch (err) {
+        console.error(`An error has occurred trying to check auth, Error: ${err.stack}`);
+        renderErrorPage(req, res, err);
     }
 }

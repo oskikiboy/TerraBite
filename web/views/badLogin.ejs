@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TerraBite &bull; Dashboard</title>
+    <title>TerraBite &bull; Unauthorised</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="oskikiboy">
-    <meta name="description" content="Dashboard">
+    <meta name="description" content="Unauthorised">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="TerraBite">
     <meta property="og:image" content="assets/img/icon.png">
-    <meta property="og:description" content="Dashboard">
+    <meta property="og:description" content="Unauthorised">
 
     <meta name="twitter:title" content="TerraBite">
     <meta name="twitter:image" content="/img/icon.png">
-    <meta name="twitter:description" content="Dashboard">
+    <meta name="twitter:description" content="Unauthorised">
 
     <link rel="shortcut icon" type="image/png" href="/img/icon.png">
     <meta name="theme-color" content="#551A8B">
@@ -115,31 +115,59 @@
                 <img id="logo" src="/img/icon.png">
                 <div class="column is-9">
                     <h1 class="title is-1" style="color:#fff;">&bull; TerraBite</h1>
-                    <h2 style="margin-top: -1.2rem;">Administration Panel</h2>
+                    <h2 style="margin-top: -1.2rem;">Unauthorised</h2>
                 </div>
             </div>
         </div>
         <div class="container has-text-centered is-hidden-tablet">
             <h1 class="title is-1">TerraBite</h1>
-            <h2 class="subtitle is-4">Administration Panel</h2>
+            <h2 class="subtitle is-4">Unauthorised</h2>
         </div>
     </div>
 </section>
-<section id="header" class="hero is-danger is-medium is-bold">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title is-1">
-                <strong>Welcome to the TerraBite Dashboard</strong>, but unfortunately it seems that this is a WIP. <h1><span class="tag is-dark is-medium">Work In Progress</span></h1><br><br/>
-            </h1>
+<% if (!loggedInStatus) { %>
+<section class="section">
+    <div class="container has-text-centered box">
+        <div class="header">
+            <h1 class="title">
+                <strong><i>TerraBite &bull; Unauthorised</i></strong>
+            </h1><br>
+            <h2 class="subtitle">
+                You must be logged in to access this!
+                <br>
+                You can login by clicking on the following button:
+                <br><br><br>
+                <a class="button is-info" href="/login">
+  					<span class="icon">
+    					<i class="fa fa-sign-in" aria-hidden="true"></i>
+  					</span>
+                    <span>Sign in to TerraBite</span>
+                </a>
+            </h2>
         </div>
-    </div>
-    <div class="hero-foot">
-        <div class="container has-text-centered">
-           <h2 class="title is-4">Come back Later</h2>
-        </div>
-        <br>
     </div>
 </section>
+<% } else { %>
+<section class="section">
+    <div class="container has-text-centered box">
+        <div class="header">
+            <h1 class="title">
+                <strong><i>TerraBite &bull; Unauthorised</i></strong>
+            </h1><br>
+            <h2 class="subtitle">
+                I'm sorry but you do not have permission to access this page!
+                <br><br><br>
+                <a class="button is-success is-large" href="/">
+                                <span class="icon">
+                                    <i class="fa fa-home"></i>
+                                </span>
+                    <span>Take me home!</span>
+                </a>
+            </h2>
+        </div>
+    </div>
+</section>
+<% } %>
 <% include ./partials/foot %>
 <% include ./partials/up %>
 <script src="/js/miny-part/app.js"></script>
