@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44a971b-9873-4a56-9789-6b31c313a04c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/bigmessage.js" afterPath="$PROJECT_DIR$/commands/bigmessage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/eval.js" afterPath="$PROJECT_DIR$/commands/eval.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/help.js" afterPath="$PROJECT_DIR$/commands/help.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +54,8 @@
       <file leaf-file-name="bigmessage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands/bigmessage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -66,8 +64,8 @@
       <file leaf-file-name="eval.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands/eval.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+            <state relative-caret-position="234">
+              <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -76,8 +74,8 @@
       <file leaf-file-name="help.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commands/help.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="168" column="69" lean-forward="false" selection-start-line="168" selection-start-column="69" selection-end-line="168" selection-end-column="69" />
+            <state relative-caret-position="402">
+              <caret line="168" column="41" lean-forward="false" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -994,12 +992,12 @@
       <workItem from="1498022123546" duration="10547000" />
       <workItem from="1498365488934" duration="15790000" />
       <workItem from="1498445088261" duration="3287000" />
-      <workItem from="1499070662188" duration="33500000" />
+      <workItem from="1499070662188" duration="33894000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114706000" />
+    <option name="totallyTimeSpent" value="115100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -1436,24 +1434,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commands/bigmessage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commands/eval.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        <state relative-caret-position="234">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commands/help.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="168" column="69" lean-forward="false" selection-start-line="168" selection-start-column="69" selection-end-line="168" selection-end-column="69" />
+        <state relative-caret-position="402">
+          <caret line="168" column="41" lean-forward="false" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
           <folding />
         </state>
       </provider>
