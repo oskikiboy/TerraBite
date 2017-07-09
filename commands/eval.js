@@ -29,7 +29,7 @@ var shards = new Discord.ShardClientUtil(client);
 exports.settings = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: [e],
   permlevel: 10
 };
 

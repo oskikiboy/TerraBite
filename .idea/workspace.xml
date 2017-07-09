@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e44a971b-9873-4a56-9789-6b31c313a04c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/css/style.css" afterPath="$PROJECT_DIR$/web/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/index.ejs" afterPath="$PROJECT_DIR$/web/views/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/partials/nav.ejs" afterPath="$PROJECT_DIR$/web/views/partials/nav.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/bigmessage.js" afterPath="$PROJECT_DIR$/commands/bigmessage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/eval.js" afterPath="$PROJECT_DIR$/commands/eval.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/help.js" afterPath="$PROJECT_DIR$/commands/help.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nav.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/partials/nav.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -49,6 +49,36 @@
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#i#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bigmessage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commands/bigmessage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eval.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commands/eval.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commands/help.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="168" column="69" lean-forward="false" selection-start-line="168" selection-start-column="69" selection-end-line="168" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,36 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
               <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staff.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/partials/staff.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="10" lean-forward="false" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="up.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/partials/up.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="80" lean-forward="false" selection-start-line="0" selection-start-column="80" selection-end-line="0" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="username.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/partials/username.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,7 +160,6 @@
         <option value="$PROJECT_DIR$/commands/askdevs.js" />
         <option value="$PROJECT_DIR$/launcher.py" />
         <option value="$PROJECT_DIR$/web/static/js/miny-part/particles.js" />
-        <option value="$PROJECT_DIR$/commands/help.js" />
         <option value="$PROJECT_DIR$/utils/console.js" />
         <option value="$PROJECT_DIR$/utils/logging.js" />
         <option value="$PROJECT_DIR$/node_modules/maintenance/source/maintenance.js" />
@@ -195,6 +194,9 @@
         <option value="$PROJECT_DIR$/web/static/css/style.css" />
         <option value="$PROJECT_DIR$/web/views/index.ejs" />
         <option value="$PROJECT_DIR$/web/views/partials/nav.ejs" />
+        <option value="$PROJECT_DIR$/commands/bigmessage.js" />
+        <option value="$PROJECT_DIR$/commands/eval.js" />
+        <option value="$PROJECT_DIR$/commands/help.js" />
       </list>
     </option>
   </component>
@@ -992,12 +994,12 @@
       <workItem from="1498022123546" duration="10547000" />
       <workItem from="1498365488934" duration="15790000" />
       <workItem from="1498445088261" duration="3287000" />
-      <workItem from="1499070662188" duration="33121000" />
+      <workItem from="1499070662188" duration="33500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114327000" />
+    <option name="totallyTimeSpent" value="114706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -1049,24 +1051,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/static/data/blog_posts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/passport-discord/lib/strategy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/help.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1275">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1189,14 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/eval.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-191">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1451,6 +1431,30 @@
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#i#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/bigmessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/eval.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="32" column="14" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/help.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="168" column="69" lean-forward="false" selection-start-line="168" selection-start-column="69" selection-end-line="168" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
