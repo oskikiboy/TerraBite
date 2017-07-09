@@ -91,8 +91,8 @@ play  queue   skip
     msg.edit(`For a Help menu without reactions use \`${prefix}help full\`\n\nType \`${prefix}help [command]\` for more info on a specific command\n\n| :information_source: Information | :game_die: Fun/Misc | :musical_note: Music | :tools: **__Mod/Admin__** |\n
 :tools: Mod/Admin\n
 \`\`\`
-purge  kick   warn  say   ban   bigmessage
-lockdown   unpunish   setprefix   queue   clear
+purge  kick   warn  say   ban
+lockdown   unpunish   setprefix   queue clear
 \`\`\``).then(m => {
       m.awaitReactions((reaction, user) => user.id === author.id, {
         max: 1,
@@ -166,7 +166,6 @@ donate    invite    ping    uptime    support
     .setColor(hexcols[~~(Math.random() * hexcols.length)])
     .addField(`image <query>`, 'Searches google for Images')
     .addField(`afk [afk message]`, 'Sets your status as AFK')
-    .addField(`bigmessage [message]`, 'Sends a message to all servers)
     .addField(`calc <calculation>`, 'Calculates Maths')
     .addField(`lmgtfy <question>`, 'Generates an lmgtfy link');
     message.author.send({embed: util});
