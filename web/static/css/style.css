@@ -3,7 +3,7 @@
     background: linear-gradient(45deg, rgba(35, 50, 59, 1) 0%, rgba(95, 88, 128, 1) 100%);
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
 
 /*CSS by Inventor02 modified by oskikiboy*/
 
@@ -18,9 +18,11 @@
 
 html, body {
     height: 100%;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
     font-size: 21px;
     color: #ECF0F1;
 }
