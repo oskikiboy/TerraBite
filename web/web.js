@@ -224,13 +224,13 @@ function renderErrorPage(req, res, err, errorText) {
         console.error(`An error has occurred in Web.js, Error: ${err.stack}`);
         res.render('error', {
             error_code: 500,
-            error_text: err
+            error_text: err,
             title: 'Error'
         })
     } else {
         res.render('error', {
             error_code: 500,
-            error_text: errorText
+            error_text: errorText,
             title: 'Error'
         })
     }
