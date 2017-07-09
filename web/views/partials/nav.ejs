@@ -33,32 +33,32 @@
             <a class="nav-item" href="blog" id="nav-blog">
                 Blog
             </a>
-        </div>
-        <div class="field">
-            <p class="control has-icons-left">
-                <% if(authUser) { %>
-                <a id="nav-dashboard" class="nav-item is-tab is-active" href="/wip" title="Go to dashboard">
-                    <img class="image is-16x16" src="<%= authUser.avatar %>" style="border-radius: 100%;" alt="<%= authUser.id %>">
-                    &nbsp;
-                    <span><%= authUser.username %></span>
-                </a>
-                <% } else { %>
-            <p class="nav-item control has-addons">
-                <a class="button is-white is-outlined" href="/add">
+            <div class="field">
+                <p class="control has-icons-left">
+                    <% if(authUser) { %>
+                    <a id="nav-dashboard" class="nav-item is-tab is-active" href="/wip" title="Go to dashboard">
+                        <img class="image is-16x16" src="<%= authUser.avatar %>" style="border-radius: 100%;" alt="<%= authUser.id %>">
+                        &nbsp;
+                        <span><%= authUser.username %></span>
+                    </a>
+                    <% } else { %>
+                <p class="nav-item control has-addons">
+                    <a class="button is-white is-outlined" href="/add">
                 <span class="icon is-small">
                     <i class="fa fa-plus"></i>
                 </span>
-                    <span>Add</span>
-                </a>
-                <a class="button is-info is-outlined is-iverted" href="<%= support %>" style="margin-left: 0px;">
+                        <span>Add</span>
+                    </a>
+                    <a class="button is-info is-outlined is-iverted" href="<%= support %>" style="margin-left: 0px;">
                 <span class="icon is-small">
                     <i class="fa fa-handshake-o"></i>
                 </span>
-                    <span>Support</span>
-                </a>
-            </p>
-            <% } %>
-            </p>
+                        <span>Support</span>
+                    </a>
+                </p>
+                <% } %>
+                </p>
+            </div>
         </div>
         <span class="nav-toggle" id="nav-toggle">
             <span></span>

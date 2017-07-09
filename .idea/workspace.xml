@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44a971b-9873-4a56-9789-6b31c313a04c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commands/help.js" afterPath="$PROJECT_DIR$/commands/help.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/static/img/icon.png" afterPath="$PROJECT_DIR$/web/static/img/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/partials/nav.ejs" afterPath="$PROJECT_DIR$/web/views/partials/nav.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nav.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/partials/nav.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+            <state relative-caret-position="405">
+              <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#i#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
@@ -70,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="help.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands/help.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="94" column="40" lean-forward="false" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+            <state relative-caret-position="15">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,10 +191,10 @@
         <option value="$PROJECT_DIR$/web/web.js" />
         <option value="$PROJECT_DIR$/web/static/css/style.css" />
         <option value="$PROJECT_DIR$/web/views/index.ejs" />
-        <option value="$PROJECT_DIR$/web/views/partials/nav.ejs" />
         <option value="$PROJECT_DIR$/commands/bigmessage.js" />
         <option value="$PROJECT_DIR$/commands/eval.js" />
         <option value="$PROJECT_DIR$/commands/help.js" />
+        <option value="$PROJECT_DIR$/web/views/partials/nav.ejs" />
       </list>
     </option>
   </component>
@@ -991,12 +992,12 @@
       <workItem from="1498022123546" duration="10547000" />
       <workItem from="1498365488934" duration="15790000" />
       <workItem from="1498445088261" duration="3287000" />
-      <workItem from="1499070662188" duration="33981000" />
+      <workItem from="1499070662188" duration="34299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115187000" />
+    <option name="totallyTimeSpent" value="115505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -1420,17 +1421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/partials/nav.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#i#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commands/bigmessage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1449,9 +1439,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commands/help.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="94" column="40" lean-forward="false" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+        <state relative-caret-position="15">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/partials/nav.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#i#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
