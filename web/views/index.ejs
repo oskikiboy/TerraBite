@@ -2,35 +2,10 @@
 <html>
     <head>
         <title>TerraBite &bull; The best Discord Bot you'll ever come across.</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="oskikiboy">
-        <meta name="description" content="The best Discord Bot you'll ever come across.">
 
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="TerraBite">
-        <meta property="og:image" content="/img/icon.png">
-        <meta property="og:description" content="The best Discord Bot you'll ever come across.">
+        <% include ./partials/head %>
 
-        <meta name="twitter:title" content="TerraBite">
-        <meta name="twitter:image" content="/img/icon.png">
-        <meta name="twitter:description" content="The Best Discord Bot you'll ever come across.">
-
-        <link rel="shortcut icon" type="image/png" href="/img/icon.png">
-        <meta name="theme-color" content="#551A8B">
-
-        <link rel="stylesheet" href="/discord/icon-discord.css">
-        <link rel="stylesheet" href="/css/bulma.css">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?cp0z2c">
-        <link rel="icon" href="/img/icon.png">
-
-        <script src="https://use.fontawesome.com/85986a92d7.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="/js/particles.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
-        <script src="/js/bulma.js"></script>
     </head>
     <style type="text/css">
         #particles-js {
@@ -54,11 +29,11 @@
                 <% include ./partials/nav %>
             </div>
             <div class="hero-body">
-                <div style="z-index: 50;margin-left: 25%;" class="container is-hidden-mobile">
+                <div style="z-index: 50;margin: auto" class="container is-hidden-mobile">
                     <div class="columns">
                         <img id="logo" src="/img/icon.png">
                         <div class="column is-9">
-                            <h1 class="title is-1" style="color:#fff;">&bull; Terrabite</h1>
+                            <% include ./partials/title %>
                             <h2 style="margin-top: -1.2rem;">
                                 <% if (!loggedInStatus) { %>
                                 <strong>TerraBite</strong> is The Best <b>Discord</b> Bot you'll ever come across.

@@ -57,7 +57,7 @@ module.exports = function (app, config, client, req) {
         botuptime: format(uptime),
         guildamount: client.guilds.size,
         useramount: client.users.size,
-        title: 'TerraBite &bull; Home',
+        title: "The Best Discord Bot you'll ever come across.",
         support: config.support
     })
 } catch (err) {
@@ -74,7 +74,7 @@ module.exports = function (app, config, client, req) {
                 authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
                 loggedInStatus: req.isAuthenticated(),
                 userRequest: req.user || false,
-                title: 'Terrabite &bull; Blog',
+                title: 'Blog',
                 support: config.support,
         })
 
@@ -99,7 +99,7 @@ module.exports = function (app, config, client, req) {
         try {
 
             res.render('wip', {
-                title: 'TerraBite &bull; WIP'
+                title: 'WIP'
         })
 
     } catch (err) {
@@ -114,7 +114,7 @@ module.exports = function (app, config, client, req) {
         try {
 
             res.render('policy', {
-            title: 'TerraBite &bull; Paperwork'
+            title: 'Paperwork'
         })
 
     } catch (err) {
@@ -128,7 +128,7 @@ module.exports = function (app, config, client, req) {
             res.render('maintenance', {
             error_code: 503,
             message: config.maintenance_msg,
-            title: 'TerraBite &bull; Error'
+            title: 'Maintenance'
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
@@ -143,7 +143,7 @@ module.exports = function (app, config, client, req) {
             authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
-            title: 'Terrabite &bull; Dashboard',
+            title: 'Dashboard',
             support: config.support
         })
 
@@ -164,7 +164,7 @@ module.exports = function (app, config, client, req) {
                 authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
                 loggedInStatus: req.isAuthenticated(),
                 userRequest: req.user || false,
-                title: 'Terrabite &bull; DashBoard',
+                title: 'Global Dashboard',
                 superMaintainer: superMaintainer,
                 support: config.support
             });
@@ -181,6 +181,7 @@ module.exports = function (app, config, client, req) {
             authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
+            title: 'Unauthorised',
             support: config.support
         });
     }
@@ -194,7 +195,7 @@ module.exports = function (app, config, client, req) {
             res.render('error', {
             error_code: 500,
             error_text: "Why did you go to this URL? Normally an error message will be displayed here.",
-            title: 'TerraBite &bull; Error'
+            title: 'Error'
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
@@ -208,7 +209,7 @@ module.exports = function (app, config, client, req) {
             res.render('error', {
                 error_code: 404,
                 error_text: "The page you requested could not be found or rendered. Please check your request URL for spelling errors and try again. If you believe this error is faulty, please contact a system administrator.",
-                title: 'TerraBite &bull; Error'
+                title: 'Error'
             })
         } catch (err) {
             console.error(`An error has occurred trying to load the 404 page, Error: ${err.stack}`);
@@ -224,11 +225,13 @@ function renderErrorPage(req, res, err, errorText) {
         res.render('error', {
             error_code: 500,
             error_text: err
+            title: 'Error'
         })
     } else {
         res.render('error', {
             error_code: 500,
             error_text: errorText
+            title: 'Error'
         })
     }
 }
@@ -244,6 +247,7 @@ function checkAuth(req, res, next) {
             authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
+            title: 'Unauthorised',
             support: config.support
         });
     } catch (err) {
