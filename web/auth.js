@@ -1,17 +1,11 @@
 const express = require("express")
 const bodyParser = require('body-parser');
-const minify = require('express-minify');
 const cookieSession = require('cookie-session');
 
 module.exports = function (config, app, passport, DiscordS) {
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
-    app.use(express.static('Web'));
-    app.set('views', `${__dirname}/views`);
-    app.set('view engine', 'ejs');
-    app.use(minify());
-    app.use('/', express.static(`${__dirname}/static`));
     app.use(cookieSession({
         name: 'loginSession',
         keys: [config.clientID, config.session_secret],

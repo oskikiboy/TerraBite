@@ -1,8 +1,11 @@
 const requestify = require('requestify');
 const moment = require('moment');
 const fs = require('fs');
+const minify = require('express-minify');
 const express = require('express')
 const config = require("../config.json")
+const http = require('http');
+let connection;
 var path = require('path');
 const getAuthUser = user => {
     return {
@@ -14,11 +17,19 @@ const getAuthUser = user => {
 
 module.exports = function (app, config, client, req) {
 
+    const httpServer = http.createServer(app);
+    httpServer.listen(config.server_port, (err) => {
+        if (err) {
+            console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
+            return;
+        }
+        console.info(`Successfully started server.. listening on port ${config.server_port}`);
+})
+
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
     app.use(express.static(path.join(__dirname, 'static')))
-
-
+    app.use(minify());
 
     // Maintenance mode
     app.use(function (req, res, next) {

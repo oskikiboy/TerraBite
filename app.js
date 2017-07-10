@@ -16,9 +16,7 @@ const app = exports.app = express();
 const passport = require('passport');
 const session = require('express-session');
 const DiscordS = require('passport-discord').Strategy;
-const http = require('http');
-let connection;
-var io = require('socket.io')(http);
+var sio = require('socket.io');
 var shards = new Discord.ShardClientUtil(client);
 var path = require('path');
 var asciiart = `
@@ -95,7 +93,7 @@ if (config.maintenance) {
         embed.addField("Support Server", `[Link](https://discord.gg/JJAy6qw)`, true)
         embed.addField("Bot invite link", `[Link](https://discordapp.com/oauth2/authorize?client_id=295942672890331147&scope=bot&permissions=-1)`, true)
             .setColor(hexcols[~~(Math.random() * hexcols.length)]);
-        return guild.owner.sendMessage({embed: embed});
+            return guild.owner.sendMessage({embed: embed});
 });
 
     const log = message => {
@@ -139,8 +137,6 @@ if (config.maintenance) {
     };
 
     try {
-        auth(config, app, passport, DiscordS);
-        web(app, config, client, express, io);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }
@@ -159,18 +155,19 @@ if (config.maintenance) {
         return permlvl; // Returning the system.
 
     };
-
     try {
-        const httpServer = http.createServer(app);
+        /*const httpServer = http.createServer(app);
         httpServer.listen(config.server_port, (err) => {
             if (err) {
                 console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
                 return;
             }
             console.info(`Successfully started server..listening on port ${config.server_port}`);
-    })
+    })*/
+        auth(config, app, passport, DiscordS);
+        web(app, config, client, express);
     }catch (err){
-        console.error(`Error starting up server, Error: ${err.stack}`)
+        console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`)
     }
 
     process.on('uncaughtException', (err) => {
