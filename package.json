@@ -30,6 +30,7 @@
     "passport": "^0.3.2",
     "passport-discord": "^0.1.2",
     "requestify": "^0.2.5",
+    "socket.io": "^2.0.3",
     "sqlite": "^2.8.0",
     "unirest": "^0.5.1",
     "winston": "^2.3.1",

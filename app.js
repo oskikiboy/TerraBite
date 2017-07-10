@@ -5,11 +5,9 @@ const sql = require('sqlite');
 const Discord = require('discord.js');
 const unirest = require('unirest');
 const os = require('os');
-var path = require('path');
 const client = new Discord.Client({
   autoreconnect: true
 });
-var shards = new Discord.ShardClientUtil(client);
 const config = require('./config.json');
 const fs = require('fs');
 const moment = require('moment');
@@ -20,7 +18,9 @@ const session = require('express-session');
 const DiscordS = require('passport-discord').Strategy;
 const http = require('http');
 let connection;
-
+var io = require('socket.io')(http);
+var shards = new Discord.ShardClientUtil(client);
+var path = require('path');
 var asciiart = `
 ╭━━━━╮╱╱╱╱╱╱╱╱╭━━╮╱╭╮
 ┃╭╮╭╮┃╱╱╱╱╱╱╱╱┃╭╮┃╭╯╰╮
@@ -85,6 +85,17 @@ if (config.maintenance) {
 
     client.on('guildCreate', guild => {
         updateStats();
+        const hexcols = [0xFFB6C1, 0x4C84C0, 0xAD1A2C, 0x20b046, 0xf2e807, 0xf207d1, 0xee8419];
+        const embed = new Discord.RichEmbed()
+            .setAuthor('Hello there!')
+            .setDescription('Thank you for inviting TerraBite to enhance your Discord experience! Before you begin there are some things you need to know and some roles you need to add.')
+        embed.addField("Moderator Role:", `Moderator`, true)
+        embed.addField("Administrator Role:", `Administrator`, true)
+        embed.addField("Web Interface:", `[Link](https://terrabite.cf)`, true)
+        embed.addField("Support Server", `[Link](https://discord.gg/JJAy6qw)`, true)
+        embed.addField("Bot invite link", `[Link](https://discordapp.com/oauth2/authorize?client_id=295942672890331147&scope=bot&permissions=-1)`, true)
+            .setColor(hexcols[~~(Math.random() * hexcols.length)]);
+        return guild.owner.sendMessage({embed: embed});
 });
 
     const log = message => {
@@ -129,7 +140,7 @@ if (config.maintenance) {
 
     try {
         auth(config, app, passport, DiscordS);
-        web(app, config, client, express);
+        web(app, config, client, express, io);
     }catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`);
     }
