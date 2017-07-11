@@ -1,5 +1,6 @@
 const requestify = require('requestify');
 const moment = require('moment');
+const sio = require("socket.io");
 const fs = require('fs');
 const minify = require('express-minify');
 const express = require('express')
@@ -17,15 +18,18 @@ const getAuthUser = user => {
 
 module.exports = function (app, config, client, req) {
 
-    const httpServer = http.createServer(app);
-    httpServer.listen(config.server_port, (err) => {
+
+    const server = http.createServer(app).listen(config.server_port, (err) => {
         if (err) {
             console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
             return;
         }
         console.info(`Successfully started server.. listening on port ${config.server_port}`);
 })
+    const io = sio(server);
 
+
+    app.enable("trust proxy");
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
     app.use(express.static(path.join(__dirname, 'static')))
@@ -59,8 +63,8 @@ module.exports = function (app, config, client, req) {
 
         return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
     }
-
     let uptime = process.uptime();
+
     res.render('index', {
         authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
         loggedInStatus: req.isAuthenticated(),
@@ -76,6 +80,7 @@ module.exports = function (app, config, client, req) {
         console.error(`Unable to load home page, Error ${err.stack}`);
     }
 });
+
 
     app.get('/blog', (req, res) => {
 

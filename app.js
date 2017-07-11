@@ -155,6 +155,7 @@ if (config.maintenance) {
         return permlvl; // Returning the system.
 
     };
+
     try {
         /*const httpServer = http.createServer(app);
         httpServer.listen(config.server_port, (err) => {
@@ -164,7 +165,7 @@ if (config.maintenance) {
             }
             console.info(`Successfully started server..listening on port ${config.server_port}`);
     })*/
-        auth(config, app, passport, DiscordS);
+        auth(config, app, passport, DiscordS, client);
         web(app, config, client, express);
     }catch (err){
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`)
