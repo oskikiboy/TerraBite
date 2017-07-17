@@ -4557,13 +4557,7 @@ a.nav-item.is-tab.is-active {
 }
 
 .nav {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+0
   height: 3.25rem;
   position: relative;
   text-align: center;
