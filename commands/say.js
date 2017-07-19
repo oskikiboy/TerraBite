@@ -26,6 +26,7 @@ exports.run = async function (client, message, args) {
       Say = args.slice(0).join(" ");
       ch = message.channel;
     }
+    message.delete();
     ch.send(Say);
   };
 };
