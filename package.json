@@ -24,6 +24,7 @@
     "figlet": "^1.2.0",
     "fs-extra": "^3.0.1",
     "g-i-s": "^2.0.0",
+    "jjg-ping": "^1.0.1",
     "maintenance": "0.0.2",
     "mathjs": "^3.13.3",
     "mkdirp": "^0.5.1",

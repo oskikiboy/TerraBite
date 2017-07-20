@@ -33,7 +33,7 @@
                 <% include ./partials/nav %>
             </div>
             <div class="hero-body">
-                <div style="z-index: 50;margin: auto" class="container is-hidden-mobile">
+                <div style="margin: auto" class="container is-hidden-mobile">
                     <div class="columns">
                         <img id="logo" src="/img/icon.png">
                         <div class="column is-9">
@@ -94,7 +94,7 @@
                 </div>
             </div>
         </section>
-        <section class="hero is-dark is-bold">
+        <section class="hero is-primary">
             <div class="hero-body">
                 <div class="container">
                     <nav class="columns">
@@ -130,28 +130,55 @@
                 </div>
             </div>
         </section>
-        <section class="hero is-primary is-bold is-small">
+        <section class="hero is-dark is-bold is-small">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <p class="title"><strong>~ Bot Information ~</strong></p>
+                    <p class="title"><strong>~ Status Board ~</strong></p>
                     <br>
-
-                    <nav class="columns">
-                        <div class="column">
-                            <p class="heading"><strong>Total Servers</strong></p>
-                            <p class="title is-2"><%= guildamount %></p>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile">
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification is-primary">
+                                        <p class="title">Server Ping</p>
+                                        <p class="subtitle">How quick is it to reach <a href="https://terrabite.cf"><b>terrabite.cf</b></a>?</p>
+                                        <p><%= ping %> ms</p>
+                                    </article>
+                                    <article class="tile is-child notification is-info">
+                                        <p class="title">Total Users</p>
+                                        <p class="subtitle">How many people use <b>TerraBite</b>?</p>
+                                        <p><%= useramount %></p>
+                                    </article>
+                                    <article class="tile is-child notification is-warning">
+                                        <p class="title" style="color:rgba(0, 0, 0, 0.7);">Guilds</p>
+                                        <p class="subtitle" style="color:rgba(0, 0, 0, 0.7);">How many guilds does <strong style="color:rgba(0, 0, 0, 0.7);">TerraBite</strong> have?</p>
+                                        <p><%= guildamount %></p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-danger">
+                                    <p class="title">Instance Uptime</p>
+                                    <p class="subtitle">How long has <strong>TerraBite</strong> been online for?</p>
+                                    <div class="content">
+                                        <p><%= botuptime %></p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-
-                        <div class="column">
-                            <p class="heading"><strong>Total User amount</strong></p>
-                            <p class="title is-2"><%= useramount %></p>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-success">
+                                <p class="title">Make your server <strong>Great again!</strong></p>
+                                <p class="subtitle is-6">Please don't kill me</p>
+                                <div class="content">
+                                    <p><b>TerraBite</b> is feature packed, versitile and a great bot to promote activity on your server! Wheather your server is a voice chat server or a shitpost server there is always a place for TerraBite!</p>
+                                    <p><b>TerraBite</b> is the official continuation of the Timiki project and is based of the Timiki code base! We have a helpfull Development team and are always willing to help out.</p>
+                                    <p><b>TerraBite</b> has a configuration panel so you can customise the bot for your needs!*</p>
+                                    <bottom><small>*WIP</small></bottom>
+                                </div>
+                            </article>
                         </div>
-
-                        <div class="column">
-                            <p class="heading"><strong>Instance Uptime</strong></p>
-                            <p class="title is-2"><%= botuptime %></p>
-                        </div>
-                    </nav>
+                    </div>
                 </div>
             </div>
         </section>

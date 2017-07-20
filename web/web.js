@@ -7,6 +7,7 @@ const express = require('express')
 const config = require("../config.json")
 const http = require('http');
 let connection;
+var ping = require('jjg-ping');
 var path = require('path');
 const getAuthUser = user => {
     return {
@@ -27,6 +28,12 @@ module.exports = function (app, config, client, req) {
         console.info(`Successfully started server.. listening on port ${config.server_port}`);
 })
     const io = sio(server);
+
+    io.sockets.on('connection', function (socket) {
+        socket.on('ping', function() {
+            socket.emit('pong');
+        });
+    });
 
 
     app.enable("trust proxy");
@@ -65,6 +72,9 @@ module.exports = function (app, config, client, req) {
     }
     let uptime = process.uptime();
 
+    ping.system.ping('terrabite.cf', function(latency, status) {
+            var ping = latency
+
     res.render('index', {
         authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
         loggedInStatus: req.isAuthenticated(),
@@ -73,8 +83,10 @@ module.exports = function (app, config, client, req) {
         guildamount: client.guilds.size,
         useramount: client.users.size,
         title: "The Best Discord Bot you'll ever come across.",
-        support: config.support
+        support: config.support,
+        ping: ping
     })
+    });
 } catch (err) {
         renderErrorPage(req, res, err);
         console.error(`Unable to load home page, Error ${err.stack}`);
@@ -209,9 +221,13 @@ module.exports = function (app, config, client, req) {
     app.get("/error", (req, res) => {
         try {
             res.render('error', {
+            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
             error_code: 500,
             error_text: "Why did you go to this URL? Normally an error message will be displayed here.",
-            title: 'Error'
+            title: 'Error',
+            support: config.support
         })
     } catch (err) {
         console.error(`An error has occurred trying to load the error page, Error: ${err.stack}`);
@@ -225,7 +241,11 @@ module.exports = function (app, config, client, req) {
             res.render('error', {
                 error_code: 404,
                 error_text: "The page you requested could not be found or rendered. Please check your request URL for spelling errors and try again. If you believe this error is faulty, please contact a system administrator.",
-                title: 'Error'
+                title: 'Error',
+                authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+                loggedInStatus: req.isAuthenticated(),
+                userRequest: req.user || false,
+                support: config.support
             })
         } catch (err) {
             console.error(`An error has occurred trying to load the 404 page, Error: ${err.stack}`);
@@ -241,13 +261,21 @@ function renderErrorPage(req, res, err, errorText) {
         res.render('error', {
             error_code: 500,
             error_text: err,
-            title: 'Error'
+            title: 'Error',
+            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
+            support: config.support
         })
     } else {
         res.render('error', {
             error_code: 500,
             error_text: errorText,
-            title: 'Error'
+            title: 'Error',
+            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
+            support: config.support
         })
     }
 }

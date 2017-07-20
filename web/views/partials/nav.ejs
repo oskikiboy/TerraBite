@@ -1,4 +1,4 @@
-<nav class="nav has-shadow" style="background-color:rgba(0,0,0,0.29)">
+<nav class="nav has-shadow animated slideInDown" style="background-color:rgba(0,0,0,0.29)">
     <div class="container">
         <div class="nav-left">
             <a class="nav-item is-brand" href="https://discordapp.com/invite/JJAy6qw">
@@ -27,7 +27,7 @@
             <a class="nav-item" id="nav-" href="/">
                 Home
             </a>
-            <a class="nav-item" href="wip" id="nav-docs">
+            <a class="nav-item modal-button" onclick="openWIPModal()" id="nav-docs">
                 Documentation
             </a>
             <a class="nav-item" href="blog" id="nav-blog">
@@ -63,6 +63,34 @@
         </span>
     </div>
 </nav>
+<script>
+    function openWIPModal() {
+        var setupModal = document.getElementById("wip");
+        if (setupModal) {
+            setupModal.setAttribute("class", "modal is-active");
+        }
+    }
+    function closeWIPModal() {
+        var setupModal = document.getElementById("wip");
+        if (setupModal) {
+            setupModal.setAttribute("class", "modal");
+        }
+    }
+</script>
+<div class="modal" id="wip">
+    <div class="modal-background" onclick="closeWIPModal()"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">WIP</p>
+            <button class="delete" onclick="closeWIPModal()"></button>
+        </header>
+        <section class="modal-card-body" style="border-bottom-radius: 5px">
+                <h1 class="has-text-dark">
+                    Sorry but this is a WIP
+                </h1>
+        </section>
+    </div>
+</div>
 <script>
     var currentPage = window.location.pathname.split("/")[1];
     var currentNavItem = $("#nav-" + currentPage);
