@@ -72,9 +72,6 @@ module.exports = function (app, config, client, req) {
     }
     let uptime = process.uptime();
 
-    ping.system.ping('terrabite.cf', function(latency, status) {
-            var ping = latency
-
     res.render('index', {
         authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
         loggedInStatus: req.isAuthenticated(),
@@ -83,10 +80,8 @@ module.exports = function (app, config, client, req) {
         guildamount: client.guilds.size,
         useramount: client.users.size,
         title: "The Best Discord Bot you'll ever come across.",
-        support: config.support,
-        ping: ping
+        support: config.support
     })
-    });
 } catch (err) {
         renderErrorPage(req, res, err);
         console.error(`Unable to load home page, Error ${err.stack}`);

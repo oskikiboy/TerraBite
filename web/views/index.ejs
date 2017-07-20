@@ -141,8 +141,8 @@
                                 <div class="tile is-parent is-vertical">
                                     <article class="tile is-child notification is-primary">
                                         <p class="title">Server Ping</p>
-                                        <p class="subtitle">How quick is it to reach <a href="https://terrabite.cf"><b>terrabite.cf</b></a>?</p>
-                                        <p><%= ping %> ms</p>
+                                        <p class="subtitle">How quick is it to reach <a href="https://terrabite.cf"><b>terrabite.cf</b></a> from your computer?</p>
+                                        <p id="ping"></p>
                                     </article>
                                     <article class="tile is-child notification is-info">
                                         <p class="title">Total Users</p>
@@ -210,5 +210,12 @@
             });
         </script>
         -->
+        <script src="/js/ping.js"></script>
+    <script>
+        var p = new Ping();
+        p.ping("https://terrabite.cf/", function(data) {
+            document.getElementById("ping").innerHTML = data + "ms";
+        });
+    </script>
     </body>
 </html>
