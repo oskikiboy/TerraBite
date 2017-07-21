@@ -2,10 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44a971b-9873-4a56-9789-6b31c313a04c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/partials/foot.ejs" afterPath="$PROJECT_DIR$/web/views/partials/foot.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/partials/nav.ejs" afterPath="$PROJECT_DIR$/web/views/partials/nav.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/partials/username.ejs" afterPath="$PROJECT_DIR$/web/views/partials/username.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web.js" afterPath="$PROJECT_DIR$/web/web.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/HELP-US-OUT.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/font-mfizz.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/font-mfizz/preview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/animated.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/screen-reader.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_animated.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_screen-reader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/fonts/Socicon.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/readme.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/style.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/static/fonts/socicon/variables.less" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,10 +80,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-555">
+            <state relative-caret-position="-1110">
               <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="37" />
               <folding />
             </state>
@@ -53,7 +104,17 @@
         <entry file="file://$PROJECT_DIR$/web/views/badLogin.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="102" column="6" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="23" />
+              <caret line="102" column="6" lean-forward="false" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/views/partials/head.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -67,16 +128,6 @@
               <folding>
                 <element signature="n#style#0;n#span#0;n#span#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="title.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/partials/title.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -95,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/web/views/partials/username.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+              <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
               </folding>
@@ -117,7 +168,7 @@
         <entry file="file://$PROJECT_DIR$/web/views/dashboard.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
-              <caret line="91" column="51" lean-forward="true" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+              <caret line="91" column="51" lean-forward="false" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -1039,12 +1090,12 @@
       <workItem from="1500245409670" duration="15000" />
       <workItem from="1500259351047" duration="757000" />
       <workItem from="1500276073487" duration="1708000" />
-      <workItem from="1500519601744" duration="10177000" />
+      <workItem from="1500519601744" duration="10379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150994000" />
+    <option name="totallyTimeSpent" value="151196000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1374,14 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/partials/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/partials/staff.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -1417,7 +1460,7 @@
     <entry file="file://$PROJECT_DIR$/web/views/badLogin.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="102" column="6" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="23" />
+          <caret line="102" column="6" lean-forward="false" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1443,7 +1486,7 @@
     <entry file="file://$PROJECT_DIR$/web/views/partials/username.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
           </folding>
@@ -1461,7 +1504,7 @@
     <entry file="file://$PROJECT_DIR$/web/views/dashboard.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
-          <caret line="91" column="51" lean-forward="true" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+          <caret line="91" column="51" lean-forward="false" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1476,8 +1519,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
+        <state relative-caret-position="-1110">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/partials/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding />
         </state>
       </provider>
