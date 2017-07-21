@@ -33,12 +33,8 @@
             <a class="nav-item" href="blog" id="nav-blog">
                 Blog
             </a>
-            <% if(authUser) { %>
-            <a id="nav-dashboard" class="nav-item is-tab is-active" href="/dashboard" title="Go to dashboard">
-                <img class="image is-16x16" src="<%= authUser.avatar %>" style="border-radius: 100%;" alt="<%= authUser.id %>">
-                &nbsp;
-                <span><%= authUser.username %></span>
-            </a>
+            <% if(loggedInStatus) { %>
+            <% include ./username %>
             <% } else { %>
             <p class="nav-item control has-addons">
                 <a class="button is-white is-outlined" href="/add">

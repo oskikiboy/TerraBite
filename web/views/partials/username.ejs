@@ -1,4 +1,4 @@
-<a id="usernameContainer" class="nav-item is-active is-tab">
+<a id="usernameContainer" class="nav-item is-active is-tab" style="display: none;">
     <img id="imgProfilePic" class="image is-16x16" style="border-radius: 100%">&nbsp;
     <span id="spanUsername"></span>
 </a>
@@ -6,7 +6,7 @@
 <script>
     var request = <%- JSON.stringify(userRequest) %>
     var usernameContainer = document.getElementById('usernameContainer');
-    if (!request) usernameContainer.setAttribute('style', 'display: none');
+    if (request) usernameContainer.setAttribute('style', ' ');
     var username = request.username;
     var id = request.id;
     var avatarId = request.avatar;

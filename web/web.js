@@ -7,15 +7,7 @@ const express = require('express')
 const config = require("../config.json")
 const http = require('http');
 let connection;
-var ping = require('jjg-ping');
 var path = require('path');
-const getAuthUser = user => {
-    return {
-        username: user.username,
-        id: user.id,
-        avatar: user.avatar ? (`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.jpg`) : "/static/img/discord-icon.png"
-    };
-};
 
 module.exports = function (app, config, client, req) {
 
@@ -29,14 +21,6 @@ module.exports = function (app, config, client, req) {
 })
     const io = sio(server);
 
-    io.sockets.on('connection', function (socket) {
-        socket.on('ping', function() {
-            socket.emit('pong');
-        });
-    });
-
-
-    app.enable("trust proxy");
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
     app.use(express.static(path.join(__dirname, 'static')))
@@ -73,7 +57,6 @@ module.exports = function (app, config, client, req) {
     let uptime = process.uptime();
 
     res.render('index', {
-        authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
         loggedInStatus: req.isAuthenticated(),
         userRequest: req.user || false,
         botuptime: format(uptime),
@@ -94,7 +77,6 @@ module.exports = function (app, config, client, req) {
         try {
 
             res.render('blog', {
-                authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
                 loggedInStatus: req.isAuthenticated(),
                 userRequest: req.user || false,
                 title: 'Blog',
@@ -134,7 +116,6 @@ module.exports = function (app, config, client, req) {
 
         try {
             res.render('dashboard', {
-            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
             title: 'Dashboard',
@@ -155,7 +136,6 @@ module.exports = function (app, config, client, req) {
             let superMaintainer = config.developers.indexOf(req.user.id) > -1 || config.owners.indexOf(req.user.id) > -1;
 
             res.render('global', {
-                authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
                 loggedInStatus: req.isAuthenticated(),
                 userRequest: req.user || false,
                 title: 'Global Dashboard',
@@ -172,7 +152,6 @@ module.exports = function (app, config, client, req) {
         req.session.redirect = req.path;
         res.status(403);
         res.render('badLogin', {
-            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
             title: 'Unauthorised',
@@ -187,7 +166,6 @@ module.exports = function (app, config, client, req) {
     app.get("/error", (req, res) => {
         try {
             res.render('error', {
-            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
             error_code: 500,
@@ -208,7 +186,6 @@ module.exports = function (app, config, client, req) {
                 error_code: 404,
                 error_text: "The page you requested could not be found or rendered. Please check your request URL for spelling errors and try again. If you believe this error is faulty, please contact a system administrator.",
                 title: 'Error',
-                authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
                 loggedInStatus: req.isAuthenticated(),
                 userRequest: req.user || false,
                 support: config.support
@@ -228,7 +205,6 @@ function renderErrorPage(req, res, err, errorText) {
             error_code: 500,
             error_text: err,
             title: 'Error',
-            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
             support: config.support
@@ -238,7 +214,6 @@ function renderErrorPage(req, res, err, errorText) {
             error_code: 500,
             error_text: errorText,
             title: 'Error',
-            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
             support: config.support
@@ -254,7 +229,6 @@ function checkAuth(req, res, next) {
         req.session.redirect = req.path;
         res.status(403);
         res.render('badLogin', {
-            authUser: req.isAuthenticated() ? getAuthUser(req.user) : null,
             loggedInStatus: req.isAuthenticated(),
             userRequest: req.user || false,
             title: 'Unauthorised',
