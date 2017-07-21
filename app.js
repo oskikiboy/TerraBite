@@ -156,19 +156,24 @@ if (config.maintenance) {
 
     };
 
-    try {
-        /*const httpServer = http.createServer(app);
-        httpServer.listen(config.server_port, (err) => {
-            if (err) {
-                console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
-                return;
-            }
-            console.info(`Successfully started server..listening on port ${config.server_port}`);
-    })*/
-        auth(config, app, passport, DiscordS, client);
-        web(app, config, client, express);
-    }catch (err){
-        console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`)
+    if (shards.id < 1) {
+        try {
+            /*const httpServer = http.createServer(app);
+             httpServer.listen(config.server_port, (err) => {
+             if (err) {
+             console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
+             return;
+             }
+             console.info(`Successfully started server..listening on port ${config.server_port}`);
+             })*/
+            auth(config, app, passport, DiscordS, client);
+            web(app, config, client, express);
+        } catch (err) {
+            console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`)
+        }
+    }
+    else {
+
     }
 
     process.on('uncaughtException', (err) => {
