@@ -15,7 +15,7 @@ exports.run = async function (client, message, args) {
         description: `${pingmessage}`,
         timestamp: new Date(),
         footer: {
-          text: `${message.author.username} Wants to know how fast I am!`
+          text: `${message.author.username} wants to know how fast I am!`
         }
       }
     })
