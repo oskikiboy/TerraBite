@@ -25,14 +25,13 @@ module.exports = async client => { // When the client is ready it will log to th
 
   var shards = new Discord.ShardClientUtil(client); // Enables the ShardClientUtil under the name of shards
   console.log(`Online, Logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`);
-    client.user.setGame(`on ${shards.id} out of 3 | ${config.prefix}help`);
 
-  /*setInterval(function() { // Sets the interval to change the playing status every 30000 miliseconds or 30seconds
+  setInterval(function() { // Sets the interval to change the playing status every 30000 miliseconds or 30seconds
     changePlaying(); // The Function to call every 30 seconds
   }, 30000);
 
   function changePlaying() { // The function to change the playing status randomly
-    switch (Math.floor(Math.random() * 9)) { // Random number generator
+    switch (Math.floor(Math.random() * 10)) { // Random number generator
       case 0:
         client.user.setGame(`on ${client.guilds.size} guilds | ${config.prefix}help`);
       case 1:
@@ -55,6 +54,9 @@ module.exports = async client => { // When the client is ready it will log to th
         break;
       case 8:
         client.user.setGame(`with code | ${config.prefix}help`);
+      case 9:
+        client.user.setGame(`on ${shards.id} out of 2 | ${config.prefix}help`)
+        break;
     }
-  };*/
+  };
 };
