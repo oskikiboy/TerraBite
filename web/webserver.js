@@ -5,29 +5,119 @@ const fs = require('fs');
 const minify = require('express-minify');
 const express = require('express')
 const config = require("../config.json")
+const bodyParser = require('body-parser');
+const cookieSession = require('cookie-session');
+const RateLimit = require("express-rate-limit");
 const http = require('http');
 let connection;
 var path = require('path');
+var minifyHTML = require('express-minify-html');
 
-module.exports = function (app, config, client, req) {
+module.exports = function(app, config, client, req, passport, DiscordS) {
 
 
     const server = http.createServer(app).listen(config.server_port, (err) => {
-        if (err) {
-            console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
-            return;
-        }
-        console.info(`Successfully started server.. listening on port ${config.server_port}`);
+            if (err) {
+                console.error(`FAILED TO OPEN WEB SERVER, ERROR: ${err.stack}`);
+                return;
+            }
+            console.info(`Successfully started server.. listening on port ${config.server_port}`);
 })
     const io = sio(server);
+
 
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
     app.use(express.static(path.join(__dirname, 'static')))
-    app.use(minify());
+    app.use(minifyHTML({
+        override:      true,
+        exception_url: false,
+        htmlMinifier: {
+            removeComments:            true,
+            collapseWhitespace:        true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes:     true,
+            removeEmptyAttributes:     true,
+            minifyJS:                  true
+        }
+    }));
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
+    app.use(cookieSession({
+        name: 'loginSession',
+        keys: [config.clientID, config.session_secret],
+        maxAge: 12 * 60 * 60 * 1000 // 48 hours
+    }));
+    app.use(passport.initialize());
+    app.use(passport.session());
+
+    const scopes = [
+        'identify',
+        'guilds'
+    ];
+
+    passport.serializeUser((user, done) => {
+        done(null, user);
+});
+
+    passport.deserializeUser((obj, done) => {
+        done(null, obj);
+});
+
+    passport.use(new DiscordS({
+            clientID: config.clientID,
+            clientSecret: config.clientSecret,
+            callbackURL: `${config.host}/login/callback`,
+            scopes: scopes
+
+        }, (accessToken, refreshToken, profile, done) => {
+            process.nextTick(() => {
+            return done(null, profile);
+});
+}));
+
+
+    // Data API
+    app.use("/api/", new RateLimit({
+        windowMs: 3600000, // 150 requests/per hr
+        max: 150,
+        delayMs: 0
+    }));
+    app.get("/api", (req, res) => {
+        res.json({
+        server_count: client.guilds.size,
+        user_count: client.users.size
+    });
+});
+
+    app.get('/login', passport.authenticate('discord', {
+        scope: scopes
+    }), function(req, res) {});
+    app.get('/login/callback',
+        passport.authenticate('discord', {
+            failureRedirect: '/error'
+        }), (req, res) => {
+    {
+        res.redirect('/dashboard')
+    }
+    console.log(`- ${req.user.username} has logged on.`);
+} // auth success
+    );
+
+
+    app.get("/debug", checkAuth, (req, res) => {
+        res.json(req.user);
+});
+
+    app.get("/logout", (req, res) => {
+        req.logout();
+    res.redirect("/");
+})
 
     // Maintenance mode
-    app.use(function (req, res, next) {
+    app.use(function(req, res, next) {
         if (config.maintenance === true) {
 
             // Need this condition to avoid redirect loop
@@ -44,12 +134,12 @@ module.exports = function (app, config, client, req) {
 
     app.get("/", (req, res) => {
         try {
-            function format(seconds){
-        function pad(s){
+            function format(seconds) {
+        function pad(s) {
             return (s < 10 ? '0' : '') + s;
         }
-        var hours = Math.floor(seconds / (60*60));
-        var minutes = Math.floor(seconds % (60*60) / 60);
+        var hours = Math.floor(seconds / (60 * 60));
+        var minutes = Math.floor(seconds % (60 * 60) / 60);
         var seconds = Math.floor(seconds % 60);
 
         return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
@@ -77,10 +167,10 @@ module.exports = function (app, config, client, req) {
         try {
 
             res.render('blog', {
-                loggedInStatus: req.isAuthenticated(),
-                userRequest: req.user || false,
-                title: 'Blog',
-                support: config.support,
+            loggedInStatus: req.isAuthenticated(),
+            userRequest: req.user || false,
+            title: 'Blog',
+            support: config.support,
         })
 
     } catch (err) {
@@ -147,8 +237,7 @@ module.exports = function (app, config, client, req) {
             console.error(`Unable to load maintainer page, Error: ${err.stack}`);
             renderErrorPage(req, res, err);
         }
-    }
-    else {
+    } else {
         req.session.redirect = req.path;
         res.status(403);
         res.render('badLogin', {
@@ -180,7 +269,7 @@ module.exports = function (app, config, client, req) {
 });
 
     //404 Error page (Must be the last route!)
-    app.use(function (req, res, next) {
+    app.use(function(req, res, next) {
         try {
             res.render('error', {
                 error_code: 404,

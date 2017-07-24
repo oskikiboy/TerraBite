@@ -33,10 +33,9 @@ module.exports = async client => { // When the client is ready it will log to th
 
   function changePlaying() { // The function to change the playing status randomly
       let shardnum = shards.id++
-    switch (Math.floor(Math.random() * 10)) { // Random number generator
-        case 0:
-            client.user.setGame(`on shard ${shardnum} out of 2 | ${config.prefix}help`)
-            break;
+    switch (Math.floor(Math.random() * 9)) { // Random number generator
+      case 0:
+        client.user.setGame(`on ${client.guilds.size} guilds | ${config.prefix}help`);
       case 1:
         client.user.setGame(`with ${client.users.size} users! | ${config.prefix}help`);
       case 2:
@@ -57,10 +56,7 @@ module.exports = async client => { // When the client is ready it will log to th
         break;
       case 8:
         client.user.setGame(`with code | ${config.prefix}help`);
-          break;
-        case 9:
-            client.user.setGame(`on ${client.guilds.size} guilds | ${config.prefix}help`);
-            break;
+        break;
     }
   };
 };
