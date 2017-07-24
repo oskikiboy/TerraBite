@@ -150,7 +150,7 @@ client.elevation = message => {
 
 if (shards.id < 1) {
     try {
-        web(app, config, client, express, passport, DiscordS, );
+        web(app, config, client, express, passport, DiscordS);
     } catch (err) {
         console.error(`An error occurred during the web interface module initialisation, Error: ${err.stack}`)
     }
