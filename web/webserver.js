@@ -79,43 +79,6 @@ module.exports = function(app, config, client, req, passport, DiscordS) {
 }));
 
 
-    // Data API
-    app.use("/api/", new RateLimit({
-        windowMs: 3600000, // 150 requests/per hr
-        max: 150,
-        delayMs: 0
-    }));
-    app.get("/api", (req, res) => {
-        res.json({
-        server_count: client.guilds.size,
-        user_count: client.users.size
-    });
-});
-
-    app.get('/login', passport.authenticate('discord', {
-        scope: scopes
-    }), function(req, res) {});
-    app.get('/login/callback',
-        passport.authenticate('discord', {
-            failureRedirect: '/error'
-        }), (req, res) => {
-    {
-        res.redirect('/dashboard')
-    }
-    console.log(`- ${req.user.username} has logged on.`);
-} // auth success
-    );
-
-
-    app.get("/debug", checkAuth, (req, res) => {
-        res.json(req.user);
-});
-
-    app.get("/logout", (req, res) => {
-        req.logout();
-    res.redirect("/");
-})
-
     // Maintenance mode
     app.use(function(req, res, next) {
         if (config.maintenance === true) {
@@ -161,6 +124,30 @@ module.exports = function(app, config, client, req, passport, DiscordS) {
     }
 });
 
+    app.get('/login', passport.authenticate('discord', {
+        scope: scopes
+    }), function(req, res) {});
+    app.get('/login/callback',
+        passport.authenticate('discord', {
+            failureRedirect: '/error'
+        }), (req, res) => {
+    {
+        res.redirect('/dashboard')
+    }
+    console.log(`- ${req.user.username} has logged on.`);
+} // auth success
+    );
+
+
+    app.get("/debug", checkAuth, (req, res) => {
+        res.json(req.user);
+});
+
+    app.get("/logout", (req, res) => {
+        req.logout();
+    res.redirect("/");
+})
+
 
     app.get('/blog', (req, res) => {
 
@@ -187,6 +174,19 @@ module.exports = function(app, config, client, req, passport, DiscordS) {
         console.error(`An error occurred trying to redirect to the bot page, Error: ${err.stack}`);
         renderErrorPage(req, res, err);
     }
+});
+
+    // Data API
+    app.use("/api/", new RateLimit({
+        windowMs: 3600000, // 150 requests/per hr
+        max: 150,
+        delayMs: 0
+    }));
+    app.get("/api", (req, res) => {
+        res.json({
+        server_count: client.guilds.size,
+        user_count: client.users.size
+    });
 });
 
     app.get("/maintenance", (req, res) => {
