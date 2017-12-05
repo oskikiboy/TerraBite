@@ -1,0 +1,33 @@
+{
+  "prefix": "%",
+  "owners": [
+    "239738897985175552",
+    "210683612369125386",
+    "229232856063410176"
+  ],
+  "developers" : [
+    "178409772436029440",
+    "236002091120721930",
+    "258971374511587329",
+    "321193377951645699",
+    "150707175214415872"
+  ],
+
+  "token": "",
+  "clientSecret": "",
+  "clientID": "",
+  "session_secret": "",
+  "invitelink": "https://discordapp.com/oauth2/authorize?client_id=295942672890331147&scope=bot&permissions=2146958463",
+  "controller_role_name": "Moderator",
+  "administrator_role_name": "Administrator",
+  "clbotkey": "",
+  "gapikey": "",
+  "discordbotstoken": "",
+  "botsdiscordtoken": "",
+  "server_port": "8080",
+  "host": "http://localhost:8080",
+  "support": "https://discordapp.com/invite/JJAy6qw",
+  "maintenance": false,
+  "maintenance_msg": "kek",
+  "botinvite": "https://discordapp.com/oauth2/authorize?client_id=295942672890331147&scope=bot&permissions=2146958463" //same as invite link
+}

@@ -1,0 +1,15 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost:8080');
+    var startTime;
+
+    setInterval(function() {
+        startTime = Date.now();
+        socket.emit('ping');
+    }, 2000);
+
+    socket.on('pong', function() {
+        latency = Date.now() - startTime;
+        console.log(latency);
+    });
+</script>

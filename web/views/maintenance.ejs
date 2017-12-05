@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TerraBite &bull; Maintenace</title>
+
+    <% include ./partials/head %>
+
+    <script src="/js/miny-part/particles.js"></script>
+</head>
+<style type="text/css">
+
+    #particles-js {
+        width: 100%;
+        height: 0px;
+        background-color: #1D1D1D;
+        background-image: url('');
+        background-repeat: no-repeat;
+    }
+    .particles-js-canvas-el {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+    }
+
+    .banner {
+        background: -webkit-linear-gradient(45deg, rgba(35,50,59,1) 0%, rgba(95,88,128,1) 100%);
+        background: linear-gradient(45deg, rgba(35,50,59,1) 0%, rgba(95,88,128,1) 100%);
+    }
+
+    /*CSS by Inventor02*/
+
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 21px;
+        color: #ECF0F1;
+    }
+
+    #container {
+        left: 50%;
+        top: 50%;
+        margin-top: -225px;
+        margin-left: -444px;
+        min-width: 900px;
+        min-height: 330px;
+    }
+
+
+    #logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 6px;
+    }
+
+    #logo > img {
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .front {
+        z-index: 5000000;
+    }
+    .terrasize {
+        height: 500px;
+    }
+</style>
+<body>
+<div id="particles-js" class="is-hidden-mobile">
+</div>
+<section class="hero is-warning is-medium terrasize" style="z-index: -5;">
+    <div class="hero-head">
+        <a class="nav-item is-brand title is-5 is-active">
+            <img src="/img/icon.png" style="border-radius: 3px;">
+            &nbsp;
+            <strong>TerraBite</strong>
+        </a>
+    </div>
+    <div class="hero-body">
+        <div class="container is-hidden-mobile" style="margin: auto">
+            <div class="columns">
+                <img id="logo" src="/img/icon.png">
+                <div class="column is-9">
+                    <% include ./partials/title %>
+                    <h2 style="margin-top: -1.2rem;">Maintenance</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container has-text-centered is-hidden-tablet">
+            <h1 class="title is-1">TerraBite</h1>
+            <h2 class="subtitle is-4">Maintenance</h2>
+        </div>
+    </div>
+</section>
+<section id="header" class="hero is-medium is-bold">
+    <div class="container has-text-centered">
+        <br>
+        <h1 class="subtitle is-1">Maintenance</h1>
+        <br>
+        <h2 class="subtitle is-2 has-text-dark"><%= message %></h2>
+        <br>
+        <h1 class="title is-1">Come back later!</h1>
+    </div>
+</section>
+<% include ./partials/foot %>
+<% include ./partials/up %>
+<% include ./partials/sio %>
+<script src="/js/miny-part/app.js"></script>
+</body>
+</html>
+

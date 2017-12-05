@@ -1,0 +1,96 @@
+<nav class="nav has-shadow animated slideInDown" style="background-color:rgba(0,0,0,0.29)">
+    <div class="container">
+        <div class="nav-left">
+            <a class="nav-item is-brand" href="https://discordapp.com/invite/JJAy6qw">
+                <img src="/img/icon.png" alt="Logo" style="border-radius: 4px;"> &nbsp;
+                <span><span style="font-family: aaarghnormal;font-size: 15px">TerraBite</span><span class="is-hidden-mobile"> - <span style="font-family: Quicksand;"><i>V &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true" style="padding-top: 3px"></i> 2 Beta</i></span></span></span>
+            </a>
+        </div>
+        <div class="nav-center">
+            <a class="nav-item" href="https://discordapp.com/invite/JJAy6qw">
+                <span class="icon">
+                    <i class="fa socicon-discord" aria-hidden="true"></i>
+                </span>
+            </a>
+            <a class="nav-item" onclick="openWIPModal()">
+                <span class="icon">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </span>
+            </a>
+            <a class="nav-item" href="https://gitlab.com/TerraBite/TerraBite">
+                <span class="icon">
+                    <i class="fa fa-gitlab" aria-hidden="true"></i>
+                </span>
+            </a>
+        </div>
+        <div class="nav-right nav-menu" id="nav-menu">
+            <a class="nav-item" id="nav-" href="/">
+                Home
+            </a>
+            <a class="nav-item modal-button" onclick="openWIPModal()" id="nav-docs">
+                Documentation
+            </a>
+            <a class="nav-item" href="blog" id="nav-blog">
+                Blog
+            </a>
+            <% if(loggedInStatus) { %>
+            <% include ./username %>
+            <% } else { %>
+            <p class="nav-item control has-addons">
+                <a class="button is-white is-outlined" href="/add">
+                <span class="icon is-small">
+                    <i class="fa fa-plus"></i>
+                </span>
+                    <span>Add</span>
+                </a>
+                <a class="button is-info is-outlined" href="<%= support %>" style="margin-left: 0px;">
+                <span class="icon is-small">
+                    <i class="fa fa-handshake-o"></i>
+                </span>
+                    <span>Support</span>
+                </a>
+            </p>
+            <% } %>
+        </div>
+        <span class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </div>
+</nav>
+<script>
+    function openWIPModal() {
+        var setupModal = document.getElementById("wip");
+        if (setupModal) {
+            setupModal.setAttribute("class", "modal is-active");
+        }
+    }
+    function closeWIPModal() {
+        var setupModal = document.getElementById("wip");
+        if (setupModal) {
+            setupModal.setAttribute("class", "modal");
+        }
+    }
+</script>
+<div class="modal" id="wip">
+    <div class="modal-background" onclick="closeWIPModal()"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">WIP</p>
+            <button class="delete" onclick="closeWIPModal()"></button>
+        </header>
+        <section class="modal-card-body" style="border-bottom-radius: 5px">
+                <h1 class="has-text-dark">
+                    Sorry but this is a WIP
+                </h1>
+        </section>
+    </div>
+</div>
+<script>
+    var currentPage = window.location.pathname.split("/")[1];
+    var currentNavItem = $("#nav-" + currentPage);
+    if(currentNavItem) {
+        currentNavItem.addClass("is-active is-tab");
+    }
+</script>

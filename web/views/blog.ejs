@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TerraBite &bull; Blog</title>
+
+        <% include ./partials/head %>
+
+        <script src="/js/miny-part/particles.js"></script>
+        <script src="/js/blog.js"></script>
+    </head>
+    <style type="text/css">
+
+        #particles-js {
+            width: 100%;
+            height: 0px;
+            background-color: #1D1D1D;
+            background-image: url('');
+            background-repeat: no-repeat;
+        }
+        .particles-js-canvas-el {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+        }
+
+        .banner {
+            background: -webkit-linear-gradient(45deg, rgba(35,50,59,1) 0%, rgba(95,88,128,1) 100%);
+            background: linear-gradient(45deg, rgba(35,50,59,1) 0%, rgba(95,88,128,1) 100%);
+        }
+
+        /*CSS by Inventor02*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-size: 21px;
+            color: #ECF0F1;
+        }
+
+        #container {
+            left: 50%;
+            top: 50%;
+            margin-top: -225px;
+            margin-left: -444px;
+            min-width: 900px;
+            min-height: 330px;
+        }
+
+
+        #logo {
+            height: 150px;
+            width: 150px;
+            border-radius: 6px;
+        }
+
+        #logo > img {
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .front {
+            z-index: 5000000;
+        }
+        .terrasize {
+            height: 500px;
+        }
+    </style>
+    <body>
+        <div id="particles-js" class="is-hidden-mobile">
+        </div>
+        <section class="hero is-dark is-medium banner terrasize" style="z-index: -5;">
+            <div class="hero-head">
+                <% include ./partials/nav %>
+            </div>
+            <div class="hero-body">
+                <div class="container is-hidden-mobile" style="margin: auto">
+                    <div class="columns">
+                        <img id="logo" src="/img/icon.png">
+                        <div class="column is-9">
+                            <% include ./partials/title %>
+                            <h2 style="margin-top: -1.2rem;">The Official <strong>TerraBite</strong> blog.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container has-text-centered is-hidden-tablet">
+                    <h1 class="title is-1">TerraBite</h1>
+                    <h2 class="subtitle is-4">The Official <strong>TerraBite</strong> blog.</h2>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-bold is-dark">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="heading">
+                        <h1 class="title">
+                            &bull;&nbsp;Blog Posts
+                        </h1>
+                        <h2 class="subtitle">
+                            Find updates involving TerraBite here!
+                        </h2>
+                    </div>
+                    <hr>
+                    <br>
+                    <div id="blog_posts_box" class="column" style="color: #363636;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% include ./partials/foot %>
+        <% include ./partials/up %>
+        <% include ./partials/sio %>
+        <script src="/js/miny-part/app.js"></script>
+    </body>
+</html>

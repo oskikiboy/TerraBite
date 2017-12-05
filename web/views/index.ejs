@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TerraBite &bull; The best Discord Bot you'll ever come across.</title>
+
+        <% include ./partials/head %>
+
+        <script src="/js/particles.js"></script>
+    </head>
+    <style type="text/css">
+        #particles-js {
+            width: 100%;
+            height: 0px;
+            background-color: #1D1D1D;
+            background-image: url('');
+            background-repeat: no-repeat;
+        }
+
+        .particles-js-canvas-el {
+            top: 0;
+            left: 0;
+        }
+
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+    <body>
+        <div id="particles-js" class="is-hidden-mobile">
+        </div>
+        <section class="hero is-dark is-fullheight banner">
+            <div class="hero-head">
+                <% include ./partials/nav %>
+            </div>
+            <div class="hero-body">
+                <div style="margin: auto" class="container is-hidden-mobile">
+                    <div class="columns">
+                        <img id="logo" src="/img/icon.png">
+                        <div class="column is-9">
+                            <% include ./partials/title %>
+                            <h2 style="margin-top: -1.2rem;">
+                                <% if (!loggedInStatus) { %>
+                                <strong>TerraBite</strong> is The Best <b>Discord</b> Bot you'll ever come across.
+                                <% } else { %>
+                                Welcome to the <strong>TerraBite</strong> Dashboard ~ WIP.
+                                <% } %>
+                            </h2>
+                            <% if (!loggedInStatus) { %>
+                    <a class="button is-white is-medium is-outlined" href="/login" style="position: absolute">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-in"></i>
+                        </span>
+                        <span>Login</span>
+                    </a>
+                            <% } else { %>
+                    <a class="button is-white is-medium is-outlined" href="/logout">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-out"></i>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+                <div class="container is-hidden-tablet has-text-centered">
+                    <h1 class="title is-1">TerraBite</h1>
+                    <h2 class="subtitle is-4">
+                        <% if (!loggedInStatus) { %>
+                        <strong>TerraBite</strong> is The Best <b>Discord</b> Bot you'll ever come across.
+                        <% } else { %>
+                        Welcome to the <strong>TerraBite</strong> Dashboard ~ WIP.
+                        <% } %>
+                    </h2>
+                    <% if (!loggedInStatus) { %>
+                    <a class="button is-white is-medium is-outlined" href="/login">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-in"></i>
+                        </span>
+                        <span>Login</span>
+                    </a>
+                    <% } else { %>
+                    <a class="button is-white is-medium is-outlined" href="/logout">
+                        <span class="icon is-medium">
+                            <i class="fa fa-sign-out"></i>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+            <div class="hero-foot">
+                <div class="container has-text-centered">
+                </div>
+            </div>
+        </section>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <nav class="columns">
+                        <a class="column has-text-centered">
+                            <span class="icon is-large">
+                                <i class="fa fa-gamepad"></i>
+                            </span>
+                            <p class="title is-4"><strong>Great Fun!</strong></p>
+                            <p class="subtitle">Coinflip, Fortune, 8ball and More!</p>
+                        </a>
+                        <a class="column has-text-centered">
+                            <span class="icon is-large">
+                                <i class="fa fa-gavel"></i>
+                            </span>
+                            <p class="title is-4"><strong>Moderation</strong></p>
+                            <p class="subtitle">Purge, Kick, Ban, Warn</p>
+                        </a>
+                        <a class="column has-text-centered">
+                            <span class="icon is-large">
+                                <i class="fa fa-info-circle"></i>
+                            </span>
+                            <p class="title is-4"><strong>Information</strong></p>
+                            <p class="subtitle">Weather, Stats, Userinfo, Uptime</p>
+                        </a>
+                        <a class="column has-text-centered" href="<%= support %>">
+                            <span class="icon is-large">
+                                <i class="fa socicon-discord"></i>
+                            </span>
+                            <p class="title is-4"><strong>Discord</strong></p>
+                            <p class="subtitle">A chat to talk about all <strong>bot</strong> related things.</p>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-dark is-bold is-small">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p class="title"><strong>~ Status Board ~</strong></p>
+                    <br>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile">
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification is-primary">
+                                        <p class="title">Server Ping</p>
+                                        <p class="subtitle">How quick is it to reach <a href="https://terrabite.cf"><b>terrabite.cf</b></a> from your computer?</p>
+                                        <p id="ping"></p>
+                                    </article>
+                                    <article class="tile is-child notification is-info">
+                                        <p class="title">Total Users</p>
+                                        <p class="subtitle">How many people use <b>TerraBite</b>?</p>
+                                        <p><%= useramount %></p>
+                                    </article>
+                                    <article class="tile is-child notification is-warning">
+                                        <p class="title" style="color:rgba(0, 0, 0, 0.7);">Guilds</p>
+                                        <p class="subtitle" style="color:rgba(0, 0, 0, 0.7);">How many guilds does <strong style="color:rgba(0, 0, 0, 0.7);">TerraBite</strong> have?</p>
+                                        <p><%= guildamount %></p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-danger">
+                                    <p class="title">Instance Uptime</p>
+                                    <p class="subtitle">How long has <strong>TerraBite</strong> been online for?</p>
+                                    <div class="content">
+                                        <p><%= botuptime %></p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-success">
+                                <p class="title">Make your server <strong>Great again!</strong></p>
+                                <p class="subtitle is-6">Please don't kill me</p>
+                                <div class="content">
+                                    <p><b>TerraBite</b> is feature packed, versitile and a great bot to promote activity on your server! Wheather your server is a voice chat server or a shitpost server there is always a place for TerraBite!</p>
+                                    <p><b>TerraBite</b> is the official continuation of the Timiki project and is based of the Timiki code base! We have a helpfull Development team and are always willing to help out.</p>
+                                    <p><b>TerraBite</b> has a configuration panel so you can customise the bot for your needs!*</p>
+                                    <bottom><small>*WIP</small></bottom>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1 id="uptempo"></h1>
+        <% include ./partials/staff %>
+        <% include ./partials/foot %>
+        <% include ./partials/up %>
+        <% include ./partials/sio %>
+        <script src="/js/app.js"></script>
+        <!-- <script>
+            $(document).ready(function() {
+
+                $(window).scroll(function () {
+                    //if you hard code, then use console
+                    //.log to determine when you want the
+                    //nav bar to stick.
+                    console.log($(window).scrollTop())
+                    if ($(window).scrollTop() > 281) {
+                        $('#notification').addClass('front');
+                    }
+                    if ($(window).scrollTop() < 281) {
+                        $('#notification').removeClass('front');
+                    }
+                });
+            });
+            $(document).on('click', '.notification > button.delete', function() {
+                $(this).parent().addClass('is-hidden');
+                return false;
+            });
+        </script>
+        -->
+        <script src="/js/ping.js"></script>
+    <script>
+        var p = new Ping();
+        p.ping("https://terrabite.cf/", function(data) {
+            document.getElementById("ping").innerHTML = data + "ms";
+        });
+    </script>
+    </body>
+</html>
